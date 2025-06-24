@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabela Fipe - Street Car Club</title>
+    <link rel="icon" href="https://i.imgur.com/zrPywNW.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="carros.js"></script>
+    
+    <style>
+        /* Estilos e Animações Globais */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+        :root {
+            --primary-color: #3a7dca; /* Azul do logo */
+            --secondary-color: #ffffff;
+            --background-color: #1a1a2e; /* Fundo escuro temático */
+            --card-background-color: #162447; /* Fundo dos cards e tabelas */
+            --text-color: #e0e0e0;
+            --header-footer-bg: #1f4068;
+            --border-color: #3a7dca;
+            --hover-color: #2a3966; /* Cor para hover em tabelas */
+        }
+
+        /* Animação de fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        header {
+            background-color: var(--header-footer-bg);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 3px solid var(--border-color);
+        }
+
+        header h1 {
+            font-family: 'Audiowide', cursive;
+            font-size: 2.5em;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 8px rgba(58, 125, 202, 0.7);
+            margin: 0;
+        }
+        
+        main {
+             max-width: 1100px;
+             margin: 30px auto;
+             padding: 0 20px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background: var(--card-background-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            gap: 15px;
+            border-left: 5px solid var(--border-color);
+        }
+
+        #searchInput {
+            padding: 12px 15px;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid var(--border-color);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            border-radius: 6px;
+            flex: 1;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            box-shadow: 0 0 8px rgba(58, 125, 202, 0.6);
+        }
+
+        .clear-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .clear-btn:hover {
+            background: #c82333;
+        }
+
+        .car-list {
+            padding: 0 10px;
+        }
+
+        .category-heading {
+            background: var(--card-background-color);
+            color: var(--primary-color);
+            padding: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 3px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: var(--card-background-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #1f4068; /* Borda sutil */
+            text-align: left;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        tr {
+           transition: background-color 0.2s ease-in-out;
+        }
+
+        tr:nth-child(even) {
+            background: #1f2b52; /* Tom ligeiramente diferente para listras */
+        }
+
+        tr:hover {
+            background: var(--hover-color);
+        }
+
+        footer {
+            display: block;
+            background-color: var(--header-footer-bg);
+            color: var(--secondary-color);
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+            border-top: 3px solid var(--border-color);
+        }
+
+        /* Estilo para Responsividade */
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            tr {
+                margin-bottom: 15px;
+                border: 2px solid var(--border-color);
+                border-radius: 8px;
+            }
+
+            td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+                border: none;
+                border-bottom: 1px solid #1f4068;
+            }
+            
+            td:last-child {
+                border-bottom: none;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 15px;
+                width: 45%;
+                padding-right: 10px;
+                font-weight: bold;
+                text-align: left;
+                color: var(--primary-color);
+            }
+
+            th {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-car"></i> Tabela Fipe StreetCarClub</h1>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchCars()" placeholder="Buscar por carro, ano, valor ou categoria...">
+            <button class="clear-btn" onclick="document.getElementById('searchInput').value=''; populateTables();">
+                <i class="fas fa-times-circle"></i> Limpar Busca
+            </button>
+        </div>
+
+        <section class="car-list">
+            <h2 class="category-heading"><i class="fas fa-money-bill-wave"></i> Carros por Dinheiro (R$)</h2>
+            <table id="dinheiroTable">
+                <thead>
+                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2 class="category-heading"><i class="fas fa-coins"></i> Carros por Moedas</h2>
+            <table id="moedasTable">
+                <thead>
+                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2 class="category-heading"><i class="fas fa-puzzle-piece"></i> Carros por DLC</h2>
+            <table id="dlcTable">
+                <thead>
+                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2 class="category-heading"><i class="fas fa-star"></i> Carros por Pontos de Evento</h2>
+            <table id="pontosEventoTable">
+                <thead>
+                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2 class="category-heading"><i class="fas fa-gavel"></i> Carros em Leilão - Padrão Doc 350 Moedas</h2>
+            <table id="leilaoTable">
+                <thead>
+                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Tabela Fipe StreetCarClub. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        let allCarsData = [];
+
+        // Função para carregar os dados dos carros
+        function loadCarsData() {
+            try {
+                console.log('Carregando dados dos carros...');
+                allCarsData = carrosData; // Usando dados do arquivo carros.js
+                console.log('Dados carregados:', allCarsData.length, 'carros');
+                console.log('Primeiro carro:', allCarsData[0]);
+                populateTables();
+            } catch (error) {
+                console.error('Erro ao carregar dados dos carros:', error);
+                // Fallback: usar dados mínimos em caso de erro
+                allCarsData = [
+                    { "Carro": "Benefactor C300 2022", "Ano": "2022", "Valor": "R$ 198.900", "Categoria": "Sedan" }
+                ];
+                populateTables();
+            }
+        }
+
+        function populateTables(carsToDisplay = allCarsData) {
+            const dinheiroTableBody = document.querySelector('#dinheiroTable tbody');
+            const moedasTableBody = document.querySelector('#moedasTable tbody');
+            const dlcTableBody = document.querySelector('#dlcTable tbody');
+            const pontosEventoTableBody = document.querySelector('#pontosEventoTable tbody');
+            const leilaoTableBody = document.querySelector('#leilaoTable tbody');
+
+            // Limpa todas as tabelas
+            dinheiroTableBody.innerHTML = '';
+            moedasTableBody.innerHTML = '';
+            dlcTableBody.innerHTML = '';
+            pontosEventoTableBody.innerHTML = '';
+            leilaoTableBody.innerHTML = '';
+
+            carsToDisplay.forEach(car => {
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                    <td data-label="Carro">${car.Carro}</td>
+                    <td data-label="Ano">${car.Ano}</td>
+                    <td data-label="Valor">${car.Valor}</td>
+                    <td data-label="Categoria">${car.Categoria}</td>
+                `;
+
+                // Distribui os carros para a tabela correta com base no valor
+                if (car.Valor.includes('R$')) {
+                    dinheiroTableBody.appendChild(newRow);
+                } else if (car.Valor.toLowerCase().includes('moeda')) {
+                    moedasTableBody.appendChild(newRow);
+                } else if (car.Valor.toLowerCase().includes('dlc')) {
+                    dlcTableBody.appendChild(newRow);
+                } else if (car.Valor.toLowerCase().includes('pontos')) {
+                    pontosEventoTableBody.appendChild(newRow);
+                } else if (car.Valor.toLowerCase() === 'leilão') {
+                    leilaoTableBody.appendChild(newRow);
+                }
+            });
+        }
+
+        function searchCars() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const filteredCars = allCarsData.filter(car => {
+                return (
+                    car.Carro.toLowerCase().includes(searchInput) ||
+                    car.Ano.toLowerCase().includes(searchInput) ||
+                    car.Valor.toLowerCase().includes(searchInput) ||
+                    car.Categoria.toLowerCase().includes(searchInput)
+                );
+            });
+            populateTables(filteredCars);
+        }
+
+        // Popula as tabelas quando a página carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCarsData();
+        });
+    </script>
+</body>
+</html>
