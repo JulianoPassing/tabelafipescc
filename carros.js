@@ -355,5 +355,22 @@ const carrosData = [
     { "Carro": "Hilux Rally", "Ano": "2024", "Valor": "30000 Pontos", "Categoria": "Off-road" },
     { "Carro": "Fiesta Rally", "Ano": "2024", "Valor": "35000 Pontos", "Categoria": "Off-road" },
     { "Carro": "Tundra Dakar", "Ano": "2024", "Valor": "40000 Pontos", "Categoria": "Off-road" },
-    { "Carro": "Hoonicorn", "Ano": "2024", "Valor": "45000 Pontos", "Categoria": "Off-road" }
+    { "Carro": "Hoonicorn", "Ano": "2024", "Valor": "45000 Pontos", "Categoria": "Off-road" },
+    { "Carro": "Benefactor CLA-250", "Ano": "2025", "Valor": "R$ 178.990", "Categoria": "Sedan" },
+    { "Carro": "Dinka Civic SI", "Ano": "2024", "Valor": "R$ 152.990", "Categoria": "Sedan" },
+    { "Carro": "Grotti Potofino 2018", "Ano": "2018", "Valor": "R$ 2.390.000", "Categoria": "Super" },
+    { "Carro": "Bdy Dolphin", "Ano": "2024", "Valor": "R$ 109.990", "Categoria": "Hatch" },
+    { "Carro": "Bianco S", "Ano": "1976", "Valor": "R$55.000,00", "Categoria": "Sport" },
+    { "Carro": "Declasse Opala Gran Luxo", "Ano": "1971", "Valor": "R$74.000,00", "Categoria": "Coupe" },
+    { "Carro": "Vapid Rural 4x4", "Ano": "1958", "Valor": "R$95.900,00", "Categoria": "SUV" },
+    { "Carro": "Obey RS4 2001", "Ano": "2001", "Valor": "R$ 325.000", "Categoria": "Wagon" },
+    { "Carro": "Grotti F355", "Ano": "1994", "Valor": "R$ 800.000", "Categoria": "Sport" },
+    { "Carro": "AutoZan", "Ano": "1992", "Valor": "R$ 78.000", "Categoria": "Sport" },
+    { "Carro": "Obey RS7 ABT", "Ano": "2024", "Valor": "120 Moedas", "Categoria": "Sport" },
+    { "Carro": "Vapid Mustang 2025", "Ano": "2025", "Valor": "140 Moedas", "Categoria": "Muscle" },
+    { "Carro": "Vulcar XC90", "Ano": "2024", "Valor": "60 Moedas", "Categoria": "SUV" },
+    { "Carro": "Ubermacht M4 CSL", "Ano": "2023", "Valor": "160 Moedas", "Categoria": "Sport" },
+    { "Carro": "Karin Impreza Wrx 2022", "Ano": "2022", "Valor": "140 Moedas", "Categoria": "Sedan" },
+    { "Carro": "Grotti F12-TDF", "Ano": "2015", "Valor": "200 Moedas", "Categoria": "Super" },
+    { "Carro": "Koeg CC850", "Ano": "2022", "Valor": "300 Moedas", "Categoria": "Hyper" }
 ]; 
