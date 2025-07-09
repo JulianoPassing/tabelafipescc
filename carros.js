@@ -26,6 +26,8 @@ const carrosData = [
     { "Carro": "Karin Mark ll 90", "Ano": "1992", "Valor": "140 Moedas", "Categoria": "Sedan" },
     { "Carro": "Karin Supra A70 Mk3", "Ano": "1986", "Valor": "R$ 306.990", "Categoria": "Coupe" },
     { "Carro": "Karin Supra A90 FD", "Ano": "2019", "Valor": "R$ 652.990", "Categoria": "Coupe" },
+    { "Carro": "Karin Supra A90", "Ano": "2019", "Valor": "140 Moedas", "Categoria": "Sport" },
+    { "Carro": "Karin Supra MK4", "Ano": "1995", "Valor": "200 Moedas", "Categoria": "Coupe" },
     { "Carro": "Laurel C35", "Ano": "1997", "Valor": "R$ 289.990", "Categoria": "Sedan" },
     { "Carro": "Progen P1 GTR", "Ano": "2015", "Valor": "1 DLC", "Categoria": "Super" },
     { "Carro": "S15 Missile", "Ano": "1999", "Valor": "R$ 425.880", "Categoria": "Sedan" },
