@@ -340,4 +340,8 @@ const carrosData = [
     { "Carro": "Friat Fast Back", "Ano": "2024", "Valor": "R$ 130.590", "Categoria": "Suv" },
     { "Carro": "Grotti California", "Ano": "2008", "Valor": "R$ 1,590,990", "Categoria": "Sport" },
     { "Carro": "Lampadati Delta Integrale", "Ano": "1989", "Valor": "R$ 375.000", "Categoria": "Hatch" },
+    { "Carro": "650 Fly", "Ano": "2025", "Valor": "180 Moedas", "Categoria": "Boat" },
+    { "Carro": "650 Express", "Ano": "2025", "Valor": "140 Moedas", "Categoria": "Boat" },
+    { "Carro": "Blade Runner", "Ano": "2025", "Valor": "120 Moedas", "Categoria": "Boat" },
+    { "Carro": "Amels 200", "Ano": "2025", "Valor": "220 Moedas", "Categoria": "Boat" }
 ]; 

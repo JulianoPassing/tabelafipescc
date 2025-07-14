@@ -490,6 +490,14 @@
                 </thead>
                 <tbody></tbody>
             </table>
+
+            <h2 class="category-heading"><i class="fas fa-anchor"></i> Barcos</h2>
+            <table id="barcosTable">
+                <thead>
+                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </section>
     </main>
     <footer>
@@ -522,6 +530,7 @@
             const dlcTableBody = document.querySelector('#dlcTable tbody');
             const pontosEventoTableBody = document.querySelector('#pontosEventoTable tbody');
             const leilaoTableBody = document.querySelector('#leilaoTable tbody');
+            const barcosTableBody = document.querySelector('#barcosTable tbody');
 
             // Limpa todas as tabelas
             dinheiroTableBody.innerHTML = '';
@@ -529,6 +538,7 @@
             dlcTableBody.innerHTML = '';
             pontosEventoTableBody.innerHTML = '';
             leilaoTableBody.innerHTML = '';
+            barcosTableBody.innerHTML = '';
 
             carsToDisplay.forEach(car => {
                 const newRow = document.createElement('tr');
@@ -539,8 +549,10 @@
                     <td data-label="Categoria">${car.Categoria}</td>
                 `;
 
-                // Distribui os carros para a tabela correta com base no valor
-                if (car.Valor.includes('R$')) {
+                // Distribui os carros para a tabela correta com base no valor ou categoria
+                if (car.Categoria && car.Categoria.toLowerCase() === 'boat') {
+                    barcosTableBody.appendChild(newRow);
+                } else if (car.Valor.includes('R$')) {
                     dinheiroTableBody.appendChild(newRow);
                 } else if (car.Valor.toLowerCase().includes('moeda')) {
                     moedasTableBody.appendChild(newRow);
