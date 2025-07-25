@@ -1,0 +1,80 @@
+@ -0,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Staff - Adicionar Carros</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    #painel, #login { max-width: 350px; margin: auto; }
+    input, button { margin: 6px 0; width: 100%; padding: 8px; }
+    #msg, #login-erro { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Painel Staff</h1>
+  <div id="login">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="password" id="senha" placeholder="Senha"><br>
+    <button onclick="login()">Entrar</button>
+    <div id="login-erro" style="color:red"></div>
+  </div>
+  <div id="painel" style="display:none">
+    <h2>Adicionar Carro</h2>
+    <input type="text" id="marca" placeholder="Marca"><br>
+    <input type="text" id="modelo" placeholder="Modelo"><br>
+    <input type="number" id="ano" placeholder="Ano"><br>
+    <input type="number" id="preco" placeholder="Preço"><br>
+    <button onclick="adicionarCarro()">Adicionar</button>
+    <div id="msg"></div>
+    <button onclick="logout()">Sair</button>
+  </div>
+  <script>
+    // Substitua pelos seus dados do Supabase
+    const SUPABASE_URL = 'https://cauhqjoalpehsdljzlab.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNhdWhjam9hbHBlaHNkbHpqbGFiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM0MTI5MjUsImV4cCI6MjA2ODk4ODkyNX0.lGs1YbGiNvRcrni_WIz7aLQ89TazMZ9yqV0LF9vRvms'; // Cole aqui a chave completa copiada do painel
+    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    async function login() {
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+      const { error } = await supabase.auth.signInWithPassword({ email, password: senha });
+      if (error) {
+        document.getElementById('login-erro').innerText = 'Login inválido!';
+      } else {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('painel').style.display = 'block';
+      }
+    }
+
+    async function adicionarCarro() {
+      const marca = document.getElementById('marca').value;
+      const modelo = document.getElementById('modelo').value;
+      const ano = parseInt(document.getElementById('ano').value);
+      const preco = parseFloat(document.getElementById('preco').value);
+      const { error } = await supabase.from('carros').insert([{ marca, modelo, ano, preco }]);
+      if (error) {
+        document.getElementById('msg').innerText = 'Erro ao adicionar carro!';
+      } else {
+        document.getElementById('msg').innerText = 'Carro adicionado com sucesso!';
+      }
+    }
+
+    async function logout() {
+      await supabase.auth.signOut();
+      document.getElementById('painel').style.display = 'none';
+      document.getElementById('login').style.display = 'block';
+    }
+
+    // Verifica se está logado ao carregar
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('painel').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html> 
