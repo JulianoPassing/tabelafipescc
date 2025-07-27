@@ -1,35 +1,5 @@
 const carrosData = [
     {
-        "Carro": "Annis 240Z",
-        "Ano": "1969",
-        "Valor": "R$ 219.990",
-        "Categoria": "Coupe"
-    },
-    {
-        "Carro": "Annis Cefiro a31",
-        "Ano": "1988",
-        "Valor": "R$ 237.800",
-        "Categoria": "Sedan"
-    },
-    {
-        "Carro": "Annis Frontier",
-        "Ano": "2022",
-        "Valor": "R$ 159.890",
-        "Categoria": "Pick-UP"
-    },
-    {
-        "Carro": "Annis R33 Nismo",
-        "Ano": "1993",
-        "Valor": "200 Moedas",
-        "Categoria": "Sedan"
-    },
-    {
-        "Carro": "Annis RX-7 FC",
-        "Ano": "1985",
-        "Valor": "160 Moedas",
-        "Categoria": "Coupe"
-    },
-    {
         "Carro": "Annis S13",
         "Ano": "1988",
         "Valor": "100 Moedas",
@@ -2432,7 +2402,7 @@ const carrosData = [
     {
         "Carro": "teste",
         "Ano": "2026",
-        "Valor": "1000 Moedas",
+        "Valor": "1000",
         "Categoria": "super"
     }
 ];
