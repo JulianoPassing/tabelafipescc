@@ -1,9 +1,9 @@
 const carrosData = [
     {
-        "Carro": "Annis S14 Streets",
-        "Ano": "1993",
-        "Valor": "60 Moedas",
-        "Categoria": "Sedan"
+        "Carro": "Teste 2",
+        "Ano": "2016",
+        "Valor": "R$ 1.000",
+        "Categoria": "Super"
     },
     {
         "Carro": "Annis S15 LBWK",
