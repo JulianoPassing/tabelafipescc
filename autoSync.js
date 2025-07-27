@@ -228,12 +228,7 @@ async function autoSyncData(newData) {
         
         if (success) {
             hideLoadingIndicator();
-            showAlert('Dados sincronizados automaticamente! Verificando deploy...', 'success');
-            
-            // Mostra status do deploy após alguns segundos
-            setTimeout(() => {
-                showDeployStatus();
-            }, 2000);
+            showAlert('Dados sincronizados automaticamente! Todos os usuários verão as alterações.', 'success');
             
             return true;
         } else {
