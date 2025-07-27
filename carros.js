@@ -2380,5 +2380,11 @@ const carrosData = [
         "Ano": "2026",
         "Valor": "1000",
         "Categoria": "super"
+    },
+    {
+        "Carro": "Testee J33H",
+        "Ano": "2000",
+        "Valor": "R$ 1.500",
+        "Categoria": "Alto"
     }
 ];
