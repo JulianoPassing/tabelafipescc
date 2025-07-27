@@ -1,11 +1,5 @@
 const carrosData = [
     {
-        "Carro": "Teste 2",
-        "Ano": "2016",
-        "Valor": "R$ 1.000",
-        "Categoria": "Super"
-    },
-    {
         "Carro": "Annis S15 LBWK",
         "Ano": "1999",
         "Valor": "180 Moedas",
