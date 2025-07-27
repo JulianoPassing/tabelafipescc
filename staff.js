@@ -127,7 +127,7 @@ function searchCars() {
 }
 
 // Função para lidar com o envio do formulário
-function handleCarSubmit(event) {
+async function handleCarSubmit(event) {
     event.preventDefault();
     
     const carData = {
@@ -140,18 +140,21 @@ function handleCarSubmit(event) {
     if (editingIndex >= 0) {
         // Editando carro existente
         allCarsData[editingIndex] = carData;
-        showAlert('Carro atualizado com sucesso!', 'success');
+        showAlert('Carro atualizado localmente! Aplicando para todos os usuários...', 'success');
         editingIndex = -1;
         document.getElementById('formTitle').textContent = 'Adicionar Novo Carro';
     } else {
         // Adicionando novo carro
         allCarsData.push(carData);
-        showAlert('Carro adicionado com sucesso!', 'success');
+        showAlert('Carro adicionado localmente! Aplicando para todos os usuários...', 'success');
     }
 
     saveCarsData();
     populateTable();
     clearForm();
+    
+    // Aplica as alterações para todos os usuários automaticamente
+    await updateGlobalData();
 }
 
 // Função para editar carro
@@ -170,12 +173,15 @@ function editCar(index) {
 }
 
 // Função para excluir carro
-function deleteCar(index) {
+async function deleteCar(index) {
     if (confirm('Tem certeza que deseja excluir este carro?')) {
         allCarsData.splice(index, 1);
         saveCarsData();
         populateTable();
-        showAlert('Carro excluído com sucesso!', 'success');
+        showAlert('Carro excluído localmente! Aplicando para todos os usuários...', 'success');
+        
+        // Aplica a exclusão para todos os usuários automaticamente
+        await updateGlobalData();
     }
 }
 
@@ -255,6 +261,15 @@ function clearSession() {
                     updateBtn.style.background = '#F44336';
                     updateBtn.title = 'Configure o GitHub para sincronização automática';
                 }
+            }
+        }
+
+        // Função para resetar dados locais
+        function resetLocalData() {
+            if (confirm('Tem certeza que deseja resetar os dados locais? Isso irá recarregar os dados do arquivo original.')) {
+                localStorage.removeItem('carrosData');
+                loadCarsData();
+                showAlert('Dados locais resetados! Carregando dados do arquivo original.', 'success');
             }
         }
 
