@@ -2432,7 +2432,7 @@ const carrosData = [
     {
         "Carro": "teste",
         "Ano": "2026",
-        "Valor": "1000",
+        "Valor": "1000 Moedas",
         "Categoria": "super"
     }
 ];
