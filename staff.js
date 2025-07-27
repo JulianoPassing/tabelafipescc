@@ -258,5 +258,23 @@ function clearSession() {
             }
         }
 
-// Event listeners
-document.addEventListener('DOMContentLoaded', initStaffApp); 
+        // Função para testar conexão com GitHub
+        async function testConnection() {
+            if (!isAutoSyncAvailable()) {
+                showAlert('Configure o GitHub primeiro!', 'warning');
+                return;
+            }
+            
+            showLoadingIndicator();
+            const result = await testGitHubConnection();
+            hideLoadingIndicator();
+            
+            if (result.success) {
+                showAlert('Conexão com GitHub estabelecida com sucesso!', 'success');
+            } else {
+                showAlert(`Erro na conexão: ${result.message}`, 'error');
+            }
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', initStaffApp); 

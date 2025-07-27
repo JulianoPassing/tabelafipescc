@@ -15,17 +15,34 @@ async function autoCommitToGitHub(newData) {
         // Codifica o conteúdo em base64
         const encodedContent = btoa(unescape(encodeURIComponent(fileContent)));
         
+        // Primeiro, obtém o SHA do arquivo atual (necessário para atualização)
+        const getResponse = await fetch(`https://api.github.com/repos/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/contents/carros.js`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `token ${GITHUB_CONFIG.token}`,
+                'Accept': 'application/vnd.github.v3+json',
+            }
+        });
+
+        let sha = null;
+        if (getResponse.ok) {
+            const fileInfo = await getResponse.json();
+            sha = fileInfo.sha;
+        }
+
         // Faz a requisição para o GitHub API
         const response = await fetch(`https://api.github.com/repos/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/contents/carros.js`, {
             method: 'PUT',
             headers: {
                 'Authorization': `token ${GITHUB_CONFIG.token}`,
+                'Accept': 'application/vnd.github.v3+json',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 message: `Atualização automática da tabela - ${new Date().toLocaleString('pt-BR')}`,
                 content: encodedContent,
-                branch: GITHUB_CONFIG.branch
+                branch: GITHUB_CONFIG.branch,
+                sha: sha
             })
         });
 
@@ -34,7 +51,24 @@ async function autoCommitToGitHub(newData) {
             console.log('Arquivo atualizado com sucesso:', result);
             return true;
         } else {
-            console.error('Erro ao atualizar arquivo:', response.statusText);
+            const errorData = await response.json();
+            console.error('Erro ao atualizar arquivo:', {
+                status: response.status,
+                statusText: response.statusText,
+                error: errorData
+            });
+            
+            // Mostra erro específico para o usuário
+            let errorMessage = 'Erro na sincronização automática.';
+            if (response.status === 401) {
+                errorMessage = 'Token do GitHub inválido. Verifique as configurações.';
+            } else if (response.status === 403) {
+                errorMessage = 'Sem permissão para atualizar o repositório. Verifique o token.';
+            } else if (response.status === 404) {
+                errorMessage = 'Repositório não encontrado. Verifique o nome do repositório.';
+            }
+            
+            showAlert(errorMessage, 'error');
             return false;
         }
     } catch (error) {
@@ -178,8 +212,15 @@ async function autoSyncData(newData) {
         return false;
     }
     
-    // Mostra indicador de carregamento
+    // Testa a conexão primeiro
     showLoadingIndicator();
+    const connectionTest = await testGitHubConnection();
+    
+    if (!connectionTest.success) {
+        hideLoadingIndicator();
+        showAlert(`Erro na conexão: ${connectionTest.message}`, 'error');
+        return false;
+    }
     
     try {
         // Faz o commit automático
@@ -199,7 +240,6 @@ async function autoSyncData(newData) {
             return true;
         } else {
             hideLoadingIndicator();
-            showAlert('Erro na sincronização automática. Tente novamente.', 'error');
             return false;
         }
     } catch (error) {
@@ -250,6 +290,35 @@ function hideLoadingIndicator() {
 // Função para abrir página principal em nova aba
 function openMainPage() {
     window.open('index.html', '_blank');
+}
+
+// Função para testar a conexão com o GitHub
+async function testGitHubConnection() {
+    if (!loadGitHubConfig()) {
+        return { success: false, message: 'Configuração do GitHub não encontrada' };
+    }
+    
+    try {
+        const response = await fetch(`https://api.github.com/repos/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `token ${GITHUB_CONFIG.token}`,
+                'Accept': 'application/vnd.github.v3+json',
+            }
+        });
+        
+        if (response.ok) {
+            return { success: true, message: 'Conexão com GitHub estabelecida com sucesso' };
+        } else {
+            const errorData = await response.json();
+            return { 
+                success: false, 
+                message: `Erro na conexão: ${response.status} - ${errorData.message || response.statusText}` 
+            };
+        }
+    } catch (error) {
+        return { success: false, message: `Erro de rede: ${error.message}` };
+    }
 }
 
 // Função para verificar se a sincronização automática está disponível
