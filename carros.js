@@ -2440,5 +2440,11 @@ const carrosData = [
         "Ano": "2011",
         "Valor": "160 Moedas",
         "Categoria": "Sedan"
+    },
+    {
+        "Carro": "Declasse Hennessey Camaro Exorcist",
+        "Ano": "2020",
+        "Valor": "160 Moedas",
+        "Categoria": "Sport"
     }
 ];
