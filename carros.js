@@ -2422,5 +2422,11 @@ const carrosData = [
         "Ano": "2023",
         "Valor": "R$ 525.000",
         "Categoria": "Off-Road"
+    },
+    {
+        "Carro": "Ubermacht M5 G60 ",
+        "Ano": "2024",
+        "Valor": "R$ 805.000",
+        "Categoria": "Sedan"
     }
 ];
