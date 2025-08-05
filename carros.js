@@ -2398,5 +2398,11 @@ const carrosData = [
         "Ano": "2010",
         "Valor": "R$ 63.900",
         "Categoria": "SUV"
+    },
+    {
+        "Carro": "Ubermacht I8 ",
+        "Ano": "2015",
+        "Valor": "R$ 625.590",
+        "Categoria": "Coupe"
     }
 ];
