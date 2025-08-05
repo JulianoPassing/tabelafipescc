@@ -2452,5 +2452,11 @@ const carrosData = [
         "Ano": "1999",
         "Valor": "200 Moedas",
         "Categoria": "Super"
+    },
+    {
+        "Carro": "Pegassi Sian Roadster",
+        "Ano": "2020",
+        "Valor": "200 Moedas",
+        "Categoria": "Super"
     }
 ];
