@@ -2386,5 +2386,11 @@ const carrosData = [
         "Ano": "2000",
         "Valor": "R$ 1.500",
         "Categoria": "Alto"
+    },
+    {
+        "Carro": "Dewbauchee Vantage Roadster ",
+        "Ano": "2022",
+        "Valor": "R$ 2.250.000",
+        "Categoria": "Sport"
     }
 ];
