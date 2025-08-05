@@ -2458,5 +2458,11 @@ const carrosData = [
         "Ano": "2020",
         "Valor": "200 Moedas",
         "Categoria": "Super"
+    },
+    {
+        "Carro": "Grotti F8 Tributo",
+        "Ano": "2019",
+        "Valor": "180 Moedas",
+        "Categoria": "Super"
     }
 ];
