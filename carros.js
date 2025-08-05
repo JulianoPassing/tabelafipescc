@@ -6,12 +6,6 @@ const carrosData = [
         "Categoria": "Sedan"
     },
     {
-        "Carro": "Annis Skyline ER34",
-        "Ano": "1998",
-        "Valor": "R$ 354.990",
-        "Categoria": "Sedan"
-    },
-    {
         "Carro": "Emperor GS430",
         "Ano": "2000",
         "Valor": "120 Moedas",
