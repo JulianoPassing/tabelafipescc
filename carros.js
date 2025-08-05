@@ -2446,5 +2446,11 @@ const carrosData = [
         "Ano": "2020",
         "Valor": "160 Moedas",
         "Categoria": "Sport"
+    },
+    {
+        "Carro": "Pegassi Diablo GTR",
+        "Ano": "1999",
+        "Valor": "200 Moedas",
+        "Categoria": "Super"
     }
 ];
