@@ -2434,5 +2434,11 @@ const carrosData = [
         "Ano": "2017",
         "Valor": "100 Moedas",
         "Categoria": "Hatch"
+    },
+    {
+        "Carro": "Annis RX-8",
+        "Ano": "2011",
+        "Valor": "160 Moedas",
+        "Categoria": "Sedan"
     }
 ];
