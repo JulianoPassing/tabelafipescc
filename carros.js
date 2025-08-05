@@ -2404,5 +2404,11 @@ const carrosData = [
         "Ano": "2015",
         "Valor": "R$ 625.590",
         "Categoria": "Coupe"
+    },
+    {
+        "Carro": "BF Tera ",
+        "Ano": "2025",
+        "Valor": "R$ 145.890",
+        "Categoria": "SUV"
     }
 ];
