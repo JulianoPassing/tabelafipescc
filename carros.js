@@ -2416,5 +2416,11 @@ const carrosData = [
         "Ano": "2011",
         "Valor": "R$ 650.000",
         "Categoria": "Coupe"
+    },
+    {
+        "Carro": "Coil CyberTruck",
+        "Ano": "2023",
+        "Valor": "R$ 525.000",
+        "Categoria": "Off-Road"
     }
 ];
