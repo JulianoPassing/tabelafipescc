@@ -2428,5 +2428,11 @@ const carrosData = [
         "Ano": "2024",
         "Valor": "R$ 805.000",
         "Categoria": "Sedan"
+    },
+    {
+        "Carro": "Vapid Focus RS",
+        "Ano": "2017",
+        "Valor": "100 Moedas",
+        "Categoria": "Hatch"
     }
 ];
