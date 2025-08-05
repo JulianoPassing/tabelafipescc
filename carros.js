@@ -2392,5 +2392,11 @@ const carrosData = [
         "Ano": "2022",
         "Valor": "R$ 2.250.000",
         "Categoria": "Sport"
+    },
+    {
+        "Carro": "BF Parati G4 Surf ",
+        "Ano": "2010",
+        "Valor": "R$ 63.900",
+        "Categoria": "SUV"
     }
 ];
