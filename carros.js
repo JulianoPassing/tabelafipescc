@@ -6,12 +6,6 @@ const carrosData = [
         "Categoria": "Sedan"
     },
     {
-        "Carro": "Emperor GS430",
-        "Ano": "2000",
-        "Valor": "120 Moedas",
-        "Categoria": "Sedan"
-    },
-    {
         "Carro": "Emperor IS300",
         "Ano": "1999",
         "Valor": "140 Moedas",
