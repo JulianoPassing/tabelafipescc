@@ -1,11 +1,5 @@
 const carrosData = [
     {
-        "Carro": "Emperor SC300",
-        "Ano": "1991",
-        "Valor": "120 Moedas",
-        "Categoria": "Sedan"
-    },
-    {
         "Carro": "Grotti 599 FD",
         "Ano": "2006",
         "Valor": "100 Moedas",
