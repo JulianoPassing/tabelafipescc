@@ -1,11 +1,5 @@
 const carrosData = [
     {
-        "Carro": "Emperor RCF",
-        "Ano": "2014",
-        "Valor": "R$ 602.500",
-        "Categoria": "Sedan"
-    },
-    {
         "Carro": "Emperor SC300",
         "Ano": "1991",
         "Valor": "120 Moedas",
