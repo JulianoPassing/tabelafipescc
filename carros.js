@@ -2384,7 +2384,7 @@ const carrosData = [
     {
         "Carro": "Coil CyberTruck",
         "Ano": "2023",
-        "Valor": "R$ 525.000",
+        "Valor": "R$ 250.000",
         "Categoria": "Off-Road"
     },
     {
