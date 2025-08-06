@@ -2378,7 +2378,7 @@ const carrosData = [
     {
         "Carro": "Ubermacht 1M Coupe ",
         "Ano": "2011",
-        "Valor": "R$ 650.000",
+        "Valor": "R$ 340.000",
         "Categoria": "Coupe"
     },
     {
