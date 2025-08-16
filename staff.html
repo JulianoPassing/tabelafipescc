@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Staff - Tabela Fipe StreetCarClub</title>
-    <link rel="icon" href="https://i.imgur.com/zrPywNW.png" type="image/png">
+    <link rel="icon" href="https://i.imgur.com/YULctuK.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="carros.js"></script>
     <script src="staff.js"></script>
@@ -16,17 +16,17 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
         :root {
-            --primary-color: #4A90E2;
-            --secondary-color: #7B68EE;
-            --accent-color: #FF6B6B;
-            --background-color: #0D1117;
+            --primary-color: #EAF207;
+            --primary-hover: #F4F740;
+            --primary-active: #C6C403;
+            --background-color: #0D0D0D;
             --card-background: linear-gradient(135deg, #1C2333 0%, #2A3441 100%);
-            --text-color: #E6EDF3;
-            --text-secondary: #B6C2CF;
+            --text-color: #FFFFFF;
+            --text-secondary: #B0B0B0;
             --border-color: #30363D;
             --hover-color: #21262D;
             --shadow-color: rgba(0, 0, 0, 0.4);
-            --gradient-primary: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+            --gradient-primary: linear-gradient(135deg, #EAF207 0%, #F4F740 100%);
             --gradient-secondary: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
             --success-color: #4CAF50;
             --warning-color: #FF9800;
@@ -69,8 +69,8 @@
         }
 
         @keyframes glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(74, 144, 226, 0.3); }
-            50% { box-shadow: 0 0 30px rgba(74, 144, 226, 0.6); }
+            0%, 100% { box-shadow: 0 0 20px rgba(234, 242, 7, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(234, 242, 7, 0.6); }
         }
 
         @keyframes float {
@@ -95,16 +95,16 @@
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--secondary-color);
+            background: var(--primary-hover);
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             background: var(--background-color);
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(74, 144, 226, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(123, 104, 238, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            background-image: url('https://i.imgur.com/Wf7bGAO.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: var(--text-color);
             line-height: 1.7;
             overflow-x: hidden;
@@ -119,9 +119,9 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
-                radial-gradient(2px 2px at 40px 70px, rgba(123, 104, 238, 0.3), transparent),
-                radial-gradient(1px 1px at 90px 40px, rgba(255, 107, 107, 0.3), transparent);
+                radial-gradient(2px 2px at 20px 30px, rgba(234, 242, 7, 0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(244, 247, 64, 0.3), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(198, 196, 3, 0.3), transparent);
             background-size: 100px 100px;
             animation: float 6s ease-in-out infinite;
             z-index: -1;
@@ -237,7 +237,7 @@
 
         .form-group input:focus {
             outline: none;
-            box-shadow: 0 0 20px rgba(74, 144, 226, 0.4);
+            box-shadow: 0 0 20px rgba(234, 242, 7, 0.4);
             border-color: var(--primary-color);
         }
 
@@ -464,7 +464,7 @@
 
         #searchInput:focus {
             outline: none;
-            box-shadow: 0 0 20px rgba(74, 144, 226, 0.4);
+            box-shadow: 0 0 20px rgba(234, 242, 7, 0.4);
             border-color: var(--primary-color);
         }
 
@@ -519,7 +519,7 @@
         }
 
         tr:nth-child(even) {
-            background: rgba(74, 144, 226, 0.05);
+            background: rgba(234, 242, 7, 0.05);
         }
 
         tr:hover {
