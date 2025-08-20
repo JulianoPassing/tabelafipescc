@@ -2464,5 +2464,11 @@ const carrosData = [
         "Ano": "1992",
         "Valor": "R$ 80.000",
         "Categoria": "Sedan"
+    },
+    {
+        "Carro": "Ubermacht X5M",
+        "Ano": "2023",
+        "Valor": "R$ 980.000",
+        "Categoria": "SUV"
     }
 ];
