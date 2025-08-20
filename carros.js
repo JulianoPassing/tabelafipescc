@@ -2482,5 +2482,17 @@ const carrosData = [
         "Ano": "2019",
         "Valor": "100 Moedas",
         "Categoria": "Sport"
+    },
+    {
+        "Carro": "Vapid Shelby F-250 Super Baja",
+        "Ano": "2025",
+        "Valor": "80 Moedas",
+        "Categoria": "Pick-up"
+    },
+    {
+        "Carro": "Ubermacht M3 E46 GTR",
+        "Ano": "2006",
+        "Valor": "70",
+        "Categoria": "Sport"
     }
 ];
