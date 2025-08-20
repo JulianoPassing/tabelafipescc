@@ -2500,5 +2500,11 @@ const carrosData = [
         "Ano": "2016",
         "Valor": "150 Moedas",
         "Categoria": "Hyper"
+    },
+    {
+        "Carro": "Tuffade La Voiture Noire",
+        "Ano": "2021",
+        "Valor": "150 Moedas",
+        "Categoria": "Hyper"
     }
 ];
