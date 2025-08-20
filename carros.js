@@ -3,14 +3,15 @@ const carrosData = [
         "Carro": "Annis S15 LZ",
         "Ano": "1999",
         "Valor": "1 DLC",
-        "Categoria": "Sedan"
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/MIJH0sq.png"
     },
     {
         "Carro": "Annis Skyline ER34",
         "Ano": "1998",
         "Valor": "R$ 354.990",
         "Categoria": "Sedan",
-        "Imagem": "https://i.imgur.com/SzhX6D7.png"
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     },
     {
         "Carro": "Emperor GS430",
@@ -28,7 +29,8 @@ const carrosData = [
         "Carro": "Emperor RCF",
         "Ano": "2014",
         "Valor": "R$ 602.500",
-        "Categoria": "Sedan"
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/MIJH0sq.png"
     },
     {
         "Carro": "Emperor SC300",
@@ -52,7 +54,8 @@ const carrosData = [
         "Carro": "Karin Celsior",
         "Ano": "1989",
         "Valor": "R$ 246.990",
-        "Categoria": "Sedan"
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/tAvL416.png"
     },
     {
         "Carro": "Karin Chaser 90",
