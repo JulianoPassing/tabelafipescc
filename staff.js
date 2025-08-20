@@ -92,7 +92,14 @@ function populateTable(carsToDisplay = allCarsData) {
 
     carsToDisplay.forEach((car, index) => {
         const newRow = document.createElement('tr');
+        const imageUrl = car.Imagem || 'https://i.imgur.com/Wf7bGAO.png';
+        
         newRow.innerHTML = `
+            <td data-label="Imagem" class="car-image-cell">
+                <img src="${imageUrl}" alt="${car.Carro}" class="car-image" 
+                     onclick="showImagePreview('${imageUrl}', '${car.Carro}')"
+                     onerror="this.src='https://i.imgur.com/Wf7bGAO.png'">
+            </td>
             <td data-label="Carro">${car.Carro}</td>
             <td data-label="Ano">${car.Ano}</td>
             <td data-label="Valor">${car.Valor}</td>
@@ -112,6 +119,106 @@ function populateTable(carsToDisplay = allCarsData) {
     });
 }
 
+// Função para fechar preview da imagem
+function closeImagePreview() {
+    document.getElementById('imageOverlay').style.display = 'none';
+    document.getElementById('imagePreview').style.display = 'none';
+}
+
+// Função para validar URL de imagem
+function validateImageUrl(url) {
+    if (!url) return false;
+    
+    // Verifica se é uma URL válida
+    try {
+        new URL(url);
+    } catch {
+        return false;
+    }
+    
+    // Verifica se é uma imagem (extensões comuns)
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+    const hasImageExtension = imageExtensions.some(ext => 
+        url.toLowerCase().includes(ext)
+    );
+    
+    // Verifica se é do Imgur ou outras plataformas confiáveis
+    const trustedDomains = ['imgur.com', 'i.imgur.com', 'cdn.discordapp.com', 'media.discordapp.net'];
+    const isFromTrustedDomain = trustedDomains.some(domain => 
+        url.toLowerCase().includes(domain)
+    );
+    
+    return hasImageExtension || isFromTrustedDomain;
+}
+
+// Função para testar se a imagem carrega
+async function testImageUrl(url) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = url;
+        
+        // Timeout após 5 segundos
+        setTimeout(() => resolve(false), 5000);
+    });
+}
+
+// Função para testar URL da imagem no formulário
+async function testImageUrl() {
+    const imageUrl = document.getElementById('carImage').value.trim();
+    
+    if (!imageUrl) {
+        showAlert('Digite uma URL para testar!', 'warning');
+        return;
+    }
+    
+    if (!validateImageUrl(imageUrl)) {
+        showAlert('URL de imagem inválida! Verifique o formato.', 'error');
+        return;
+    }
+    
+    showAlert('Testando imagem...', 'warning');
+    
+    try {
+        const isValid = await testImageUrl(imageUrl);
+        if (isValid) {
+            showAlert('Imagem carregada com sucesso!', 'success');
+            // Mostra preview da imagem
+            showImagePreview(imageUrl, 'Teste de Imagem');
+        } else {
+            showAlert('Erro ao carregar a imagem. Verifique a URL.', 'error');
+        }
+    } catch (error) {
+        showAlert('Erro ao testar a imagem: ' + error.message, 'error');
+    }
+}
+
+// Função para mostrar preview da imagem
+function showImagePreview(imageUrl, carName) {
+    const overlay = document.getElementById('imageOverlay');
+    const preview = document.getElementById('imagePreview');
+    const previewImg = document.getElementById('previewImage');
+    const previewCarName = document.getElementById('previewCarName');
+    const previewImageUrl = document.getElementById('previewImageUrl');
+    
+    // Valida a URL antes de mostrar
+    if (!validateImageUrl(imageUrl)) {
+        showAlert('URL de imagem inválida!', 'warning');
+        return;
+    }
+    
+    previewImg.src = imageUrl;
+    previewCarName.textContent = carName;
+    previewImageUrl.textContent = imageUrl;
+    
+    overlay.style.display = 'block';
+    preview.style.display = 'block';
+    
+    // Fecha ao clicar no overlay
+    overlay.onclick = closeImagePreview;
+}
+
 // Função para buscar carros
 function searchCars() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
@@ -120,7 +227,8 @@ function searchCars() {
             car.Carro.toLowerCase().includes(searchInput) ||
             car.Ano.toLowerCase().includes(searchInput) ||
             car.Valor.toLowerCase().includes(searchInput) ||
-            car.Categoria.toLowerCase().includes(searchInput)
+            car.Categoria.toLowerCase().includes(searchInput) ||
+            (car.Imagem && car.Imagem.toLowerCase().includes(searchInput))
         );
     });
     populateTable(filteredCars);
@@ -134,7 +242,8 @@ async function handleCarSubmit(event) {
         Carro: document.getElementById('carName').value,
         Ano: document.getElementById('carYear').value,
         Valor: document.getElementById('carValue').value,
-        Categoria: document.getElementById('carCategory').value
+        Categoria: document.getElementById('carCategory').value,
+        Imagem: document.getElementById('carImage').value || 'https://i.imgur.com/Wf7bGAO.png'
     };
 
     if (editingIndex >= 0) {
@@ -164,6 +273,7 @@ function editCar(index) {
     document.getElementById('carYear').value = car.Ano;
     document.getElementById('carValue').value = car.Valor;
     document.getElementById('carCategory').value = car.Categoria;
+    document.getElementById('carImage').value = car.Imagem || '';
     
     editingIndex = index;
     document.getElementById('formTitle').textContent = 'Editar Carro';

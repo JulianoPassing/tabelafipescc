@@ -246,9 +246,9 @@
             padding: 0 10px;
         }
 
-        .category-heading {
+        .category {
             background: var(--card-background);
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             padding: 30px;
             border-radius: 20px;
             border: 1px solid var(--border-color);
@@ -257,16 +257,9 @@
             overflow: hidden;
             animation: fadeInUp 0.8s ease-out forwards;
             transition: all 0.4s ease;
-            text-align: center;
-            font-size: 1.8em;
-            font-weight: 700;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
         }
 
-        .category-heading::before {
+        .category::before {
             content: '';
             position: absolute;
             top: 0;
@@ -276,52 +269,126 @@
             background: var(--gradient-primary);
         }
 
-        .category-heading:hover {
+        .category:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 50px var(--shadow-color);
         }
 
-        .category-heading .fas {
-            font-size: 1.2em;
+        .category h2 {
+            color: var(--text-color);
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 700;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .category-icon {
+            font-size: 1.5em;
             animation: pulse 2s infinite;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: var(--card-background);
-            border-radius: 20px;
+        .vehicles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .vehicle-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px var(--shadow-color);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            position: relative;
             overflow: hidden;
-            box-shadow: 0 15px 40px var(--shadow-color);
-            border: 1px solid var(--border-color);
-            animation: fadeInUp 0.8s ease-out forwards;
         }
 
-        th, td {
-            padding: 20px;
-            border: 1px solid var(--border-color);
-            text-align: left;
-        }
-
-        th {
+        .vehicle-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
             background: var(--gradient-primary);
-            color: white;
-            font-weight: 700;
-            font-size: 1.1em;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
         }
 
-        tr {
+        .vehicle-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px var(--shadow-color);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .vehicle-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .vehicle-image {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 0 auto 15px;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
         }
 
-        tr:nth-child(even) {
-            background: rgba(234, 242, 7, 0.05);
+        .vehicle-card:hover .vehicle-image {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
         }
 
-        tr:hover {
-            background: var(--hover-color);
-            transform: scale(1.01);
+        .vehicle-name {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .vehicle-year {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .vehicle-price {
+            background: var(--gradient-primary);
+            color: var(--background-color);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            text-align: center;
+            display: inline-block;
+            min-width: 100px;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(234, 242, 7, 0.3);
+            transition: all 0.3s ease;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .vehicle-card:hover .vehicle-price {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(234, 242, 7, 0.5);
+        }
+
+        .vehicle-category {
+            color: var(--primary-color);
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 500;
         }
 
         footer {
@@ -367,9 +434,12 @@
                 margin-bottom: 30px;
             }
             
-            .category-heading {
+            .category {
                 padding: 25px;
-                margin-bottom: 25px;
+                margin-bottom: 30px;
+            }
+            
+            .category h2 {
                 font-size: 1.5em;
             }
             
@@ -377,41 +447,18 @@
                 font-size: 2em;
             }
             
-            table, thead, tbody, th, td, tr {
-                display: block;
-            }
-
-            tr {
-                margin-bottom: 15px;
-                border: 2px solid var(--border-color);
-                border-radius: 15px;
-            }
-
-            td {
-                text-align: right;
-                padding-left: 50%;
-                position: relative;
-                border: none;
-                border-bottom: 1px solid var(--border-color);
+            .vehicles-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
             }
             
-            td:last-child {
-                border-bottom: none;
+            .vehicle-card {
+                padding: 20px;
             }
 
-            td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 15px;
-                width: 45%;
-                padding-right: 10px;
-                font-weight: bold;
-                text-align: left;
-                color: var(--primary-color);
-            }
-
-            th {
-                display: none;
+            .vehicle-image {
+                width: 180px;
+                height: 135px;
             }
         }
 
@@ -420,7 +467,7 @@
                 padding: 20px;
             }
             
-            .category-heading {
+            .category {
                 padding: 20px;
                 font-size: 1.3em;
             }
@@ -428,14 +475,19 @@
             header h1 {
                 font-size: 1.8em;
             }
+
+            .vehicle-image {
+                width: 160px;
+                height: 120px;
+            }
         }
 
         /* Animações de entrada escalonadas */
-        .category-heading:nth-child(1) { animation-delay: 0.1s; }
-        .category-heading:nth-child(2) { animation-delay: 0.2s; }
-        .category-heading:nth-child(3) { animation-delay: 0.3s; }
-        .category-heading:nth-child(4) { animation-delay: 0.4s; }
-        .category-heading:nth-child(5) { animation-delay: 0.5s; }
+        .category:nth-child(1) { animation-delay: 0.1s; }
+        .category:nth-child(2) { animation-delay: 0.2s; }
+        .category:nth-child(3) { animation-delay: 0.3s; }
+        .category:nth-child(4) { animation-delay: 0.4s; }
+        .category:nth-child(5) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
@@ -445,59 +497,41 @@
     <main>
         <div class="search-container">
             <input type="text" id="searchInput" onkeyup="searchCars()" placeholder="Buscar por carro, ano, valor ou categoria...">
-            <button class="clear-btn" onclick="document.getElementById('searchInput').value=''; populateTables();">
+            <button class="clear-btn" onclick="document.getElementById('searchInput').value=''; populateCategories();">
                 <i class="fas fa-times-circle"></i> Limpar Busca
             </button>
         </div>
 
         <section class="car-list">
-            <h2 class="category-heading"><i class="fas fa-money-bill-wave"></i> Carros por Dinheiro (R$)</h2>
-            <table id="dinheiroTable">
-                <thead>
-                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="category" id="dinheiroCategory">
+                <h2><span class="category-icon"><i class="fas fa-money-bill-wave"></i></span>Carros por Dinheiro (R$)</h2>
+                <div class="vehicles-grid" id="dinheiroGrid"></div>
+            </div>
 
-            <h2 class="category-heading"><i class="fas fa-coins"></i> Carros por Moedas</h2>
-            <table id="moedasTable">
-                <thead>
-                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="category" id="moedasCategory">
+                <h2><span class="category-icon"><i class="fas fa-coins"></i></span>Carros por Moedas</h2>
+                <div class="vehicles-grid" id="moedasGrid"></div>
+            </div>
 
-            <h2 class="category-heading"><i class="fas fa-puzzle-piece"></i> Carros por DLC</h2>
-            <table id="dlcTable">
-                <thead>
-                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="category" id="dlcCategory">
+                <h2><span class="category-icon"><i class="fas fa-puzzle-piece"></i></span>Carros por DLC</h2>
+                <div class="vehicles-grid" id="dlcGrid"></div>
+            </div>
 
-            <h2 class="category-heading"><i class="fas fa-star"></i> Carros por Pontos de Evento</h2>
-            <table id="pontosEventoTable">
-                <thead>
-                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="category" id="pontosEventoCategory">
+                <h2><span class="category-icon"><i class="fas fa-star"></i></span>Carros por Pontos de Evento</h2>
+                <div class="vehicles-grid" id="pontosEventoGrid"></div>
+            </div>
 
-            <h2 class="category-heading"><i class="fas fa-gavel"></i> Carros em Leilão - Padrão Doc 350 Moedas</h2>
-            <table id="leilaoTable">
-                <thead>
-                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="category" id="leilaoCategory">
+                <h2><span class="category-icon"><i class="fas fa-gavel"></i></span>Carros em Leilão - Padrão Doc 350 Moedas</h2>
+                <div class="vehicles-grid" id="leilaoGrid"></div>
+            </div>
 
-            <h2 class="category-heading"><i class="fas fa-anchor"></i> Barcos</h2>
-            <table id="barcosTable">
-                <thead>
-                    <tr><th>Carro</th><th>Ano</th><th>Valor</th><th>Categoria</th></tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="category" id="barcosCategory">
+                <h2><span class="category-icon"><i class="fas fa-anchor"></i></span>Barcos</h2>
+                <div class="vehicles-grid" id="barcosGrid"></div>
+            </div>
         </section>
     </main>
     <footer>
@@ -513,57 +547,69 @@
                 allCarsData = carrosData; // Usando dados do arquivo carros.js
                 console.log('Dados carregados:', allCarsData.length, 'carros');
                 console.log('Primeiro carro:', allCarsData[0]);
-                populateTables();
+                populateCategories();
             } catch (error) {
                 console.error('Erro ao carregar dados dos carros:', error);
                 // Fallback: usar dados mínimos em caso de erro
                 allCarsData = [
                     { "Carro": "Benefactor C300 2022", "Ano": "2022", "Valor": "R$ 198.900", "Categoria": "Sedan" }
                 ];
-                populateTables();
+                populateCategories();
             }
         }
 
-        function populateTables(carsToDisplay = allCarsData) {
-            const dinheiroTableBody = document.querySelector('#dinheiroTable tbody');
-            const moedasTableBody = document.querySelector('#moedasTable tbody');
-            const dlcTableBody = document.querySelector('#dlcTable tbody');
-            const pontosEventoTableBody = document.querySelector('#pontosEventoTable tbody');
-            const leilaoTableBody = document.querySelector('#leilaoTable tbody');
-            const barcosTableBody = document.querySelector('#barcosTable tbody');
+        function populateCategories(carsToDisplay = allCarsData) {
+            const dinheiroGrid = document.getElementById('dinheiroGrid');
+            const moedasGrid = document.getElementById('moedasGrid');
+            const dlcGrid = document.getElementById('dlcGrid');
+            const pontosEventoGrid = document.getElementById('pontosEventoGrid');
+            const leilaoGrid = document.getElementById('leilaoGrid');
+            const barcosGrid = document.getElementById('barcosGrid');
 
-            // Limpa todas as tabelas
-            dinheiroTableBody.innerHTML = '';
-            moedasTableBody.innerHTML = '';
-            dlcTableBody.innerHTML = '';
-            pontosEventoTableBody.innerHTML = '';
-            leilaoTableBody.innerHTML = '';
-            barcosTableBody.innerHTML = '';
+            // Limpa todos os grids
+            dinheiroGrid.innerHTML = '';
+            moedasGrid.innerHTML = '';
+            dlcGrid.innerHTML = '';
+            pontosEventoGrid.innerHTML = '';
+            leilaoGrid.innerHTML = '';
+            barcosGrid.innerHTML = '';
 
             carsToDisplay.forEach(car => {
-                const newRow = document.createElement('tr');
-                newRow.innerHTML = `
-                    <td data-label="Carro">${car.Carro}</td>
-                    <td data-label="Ano">${car.Ano}</td>
-                    <td data-label="Valor">${car.Valor}</td>
-                    <td data-label="Categoria">${car.Categoria}</td>
-                `;
+                const vehicleCard = createVehicleCard(car);
 
-                // Distribui os carros para a tabela correta com base no valor ou categoria
+                // Distribui os carros para o grid correto com base no valor ou categoria
                 if (car.Categoria && car.Categoria.toLowerCase() === 'boat') {
-                    barcosTableBody.appendChild(newRow);
+                    barcosGrid.appendChild(vehicleCard);
                 } else if (car.Valor.includes('R$')) {
-                    dinheiroTableBody.appendChild(newRow);
+                    dinheiroGrid.appendChild(vehicleCard);
                 } else if (car.Valor.toLowerCase().includes('moeda')) {
-                    moedasTableBody.appendChild(newRow);
+                    moedasGrid.appendChild(vehicleCard);
                 } else if (car.Valor.toLowerCase().includes('dlc')) {
-                    dlcTableBody.appendChild(newRow);
+                    dlcGrid.appendChild(vehicleCard);
                 } else if (car.Valor.toLowerCase().includes('pontos')) {
-                    pontosEventoTableBody.appendChild(newRow);
+                    pontosEventoGrid.appendChild(vehicleCard);
                 } else if (car.Valor.toLowerCase() === 'leilão') {
-                    leilaoTableBody.appendChild(newRow);
+                    leilaoGrid.appendChild(vehicleCard);
                 }
             });
+        }
+
+        function createVehicleCard(car) {
+            const card = document.createElement('div');
+            card.className = 'vehicle-card';
+            
+            // URL da imagem padrão (você pode personalizar por carro se necessário)
+            const imageUrl = 'https://i.imgur.com/Wf7bGAO.png';
+            
+            card.innerHTML = `
+                <img src="${imageUrl}" alt="${car.Carro}" class="vehicle-image" onerror="this.src='https://i.imgur.com/Wf7bGAO.png'">
+                <div class="vehicle-name">${car.Carro}</div>
+                <div class="vehicle-year">${car.Ano}</div>
+                <div class="vehicle-price">${car.Valor}</div>
+                <div class="vehicle-category">${car.Categoria}</div>
+            `;
+            
+            return card;
         }
 
         function searchCars() {
@@ -576,10 +622,10 @@
                     car.Categoria.toLowerCase().includes(searchInput)
                 );
             });
-            populateTables(filteredCars);
+            populateCategories(filteredCars);
         }
 
-        // Popula as tabelas quando a página carregar
+        // Popula as categorias quando a página carregar
         document.addEventListener('DOMContentLoaded', () => {
             loadCarsData();
         });
