@@ -500,6 +500,9 @@
             <button class="clear-btn" onclick="document.getElementById('searchInput').value=''; populateCategories();">
                 <i class="fas fa-times-circle"></i> Limpar Busca
             </button>
+            <button class="clear-btn" onclick="refreshData()" style="background: var(--gradient-primary);">
+                <i class="fas fa-sync-alt"></i> Atualizar Dados
+            </button>
         </div>
 
         <section class="car-list">
@@ -540,12 +543,48 @@
     <script>
         let allCarsData = [];
 
+        // Função para carregar dados do GitHub
+        async function loadDataFromGitHub() {
+            try {
+                // URL do arquivo carros.js no GitHub (substitua pela URL real do seu repositório)
+                const githubUrl = 'https://raw.githubusercontent.com/SEU_USUARIO/tabelafipescc/main/carros.js';
+                
+                const response = await fetch(githubUrl);
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar do GitHub');
+                }
+                
+                const data = await response.text();
+                
+                // Extrai os dados do arquivo JavaScript
+                const dataMatch = data.match(/const carrosData = (\[[\s\S]*?\]);/);
+                if (dataMatch) {
+                    const carrosDataFromGitHub = JSON.parse(dataMatch[1]);
+                    allCarsData = carrosDataFromGitHub;
+                    console.log('Dados carregados do GitHub:', allCarsData.length, 'carros');
+                    return true;
+                }
+            } catch (error) {
+                console.error('Erro ao carregar do GitHub:', error);
+                return false;
+            }
+            return false;
+        }
+
         // Função para carregar os dados dos carros
-        function loadCarsData() {
+        async function loadCarsData() {
             try {
                 console.log('Carregando dados dos carros...');
-                allCarsData = carrosData; // Usando dados do arquivo carros.js
-                console.log('Dados carregados:', allCarsData.length, 'carros');
+                
+                // Primeiro tenta carregar do GitHub
+                const githubSuccess = await loadDataFromGitHub();
+                
+                if (!githubSuccess) {
+                    // Se falhar, usa os dados do arquivo carros.js local
+                    allCarsData = carrosData;
+                    console.log('Dados carregados do arquivo local carros.js:', allCarsData.length, 'carros');
+                }
+                
                 console.log('Primeiro carro:', allCarsData[0]);
                 populateCategories();
             } catch (error) {
@@ -625,9 +664,49 @@
             populateCategories(filteredCars);
         }
 
+        // Função para atualizar dados
+        function refreshData() {
+            loadCarsData();
+            showRefreshMessage();
+        }
+
+        // Função para mostrar mensagem de atualização
+        function showRefreshMessage() {
+            const searchContainer = document.querySelector('.search-container');
+            const message = document.createElement('div');
+            message.style.cssText = `
+                color: var(--primary-color);
+                font-weight: 600;
+                text-align: center;
+                margin-top: 10px;
+                font-size: 0.9em;
+            `;
+            message.textContent = 'Dados atualizados!';
+            
+            // Remove mensagem anterior se existir
+            const oldMessage = searchContainer.querySelector('.refresh-message');
+            if (oldMessage) oldMessage.remove();
+            
+            message.className = 'refresh-message';
+            searchContainer.appendChild(message);
+            
+            setTimeout(() => {
+                message.remove();
+            }, 2000);
+        }
+
         // Popula as categorias quando a página carregar
         document.addEventListener('DOMContentLoaded', () => {
             loadCarsData();
+            
+            // Verifica mudanças no localStorage a cada 5 segundos
+            setInterval(() => {
+                const currentData = localStorage.getItem('carrosData');
+                if (currentData && JSON.stringify(allCarsData) !== currentData) {
+                    console.log('Dados atualizados detectados, recarregando...');
+                    loadCarsData();
+                }
+            }, 5000);
         });
     </script>
 </body>
