@@ -2446,5 +2446,11 @@ const carrosData = [
         "Ano": "2015",
         "Valor": "R$ 850.000",
         "Categoria": "Sport"
+    },
+    {
+        "Carro": "Pfister 718 Spyder RS",
+        "Ano": "2024",
+        "Valor": "R$ 540.000",
+        "Categoria": "Sport"
     }
 ];
