@@ -2428,5 +2428,59 @@ const carrosData = [
         "Ano": "2019",
         "Valor": "180 Moedas",
         "Categoria": "Super"
+    },
+    {
+        "Carro": "Pfister Panamera",
+        "Ano": "2010",
+        "Valor": "R$ 200.000",
+        "Categoria": "Sport"
+    },
+    {
+        "Carro": "Obey R8 Manual",
+        "Ano": "2010",
+        "Valor": "R$ 650.000",
+        "Categoria": "Sport"
+    },
+    {
+        "Carro": "Progen 570S",
+        "Ano": "2015",
+        "Valor": "R$ 850.000",
+        "Categoria": "Sport"
+    },
+    {
+        "Carro": "Pfister 718 Spyder RS",
+        "Ano": "2024",
+        "Valor": "R$ 540.000",
+        "Categoria": "Sport"
+    },
+    {
+        "Carro": "Vapid F-150 Lift",
+        "Ano": "1978",
+        "Valor": "R$ 100.000",
+        "Categoria": "Pick-up"
+    },
+    {
+        "Carro": "Karin 155 Q4",
+        "Ano": "1992",
+        "Valor": "R$ 80.000",
+        "Categoria": "Sedan"
+    },
+    {
+        "Carro": "Ubermacht X5M",
+        "Ano": "2023",
+        "Valor": "R$ 980.000",
+        "Categoria": "SUV"
+    },
+    {
+        "Carro": "Ubermacht M4 Cabrio G83",
+        "Ano": "2021",
+        "Valor": "R$ 1.150.000",
+        "Categoria": "Sedan"
+    },
+    {
+        "Carro": "Grotti 488 Spider",
+        "Ano": "2019",
+        "Valor": "100 Moedas",
+        "Categoria": "Sport"
     }
 ];
