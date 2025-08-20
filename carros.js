@@ -29,7 +29,8 @@ const carrosData = [
         "Carro": "Emperor RCF",
         "Ano": "2014",
         "Valor": "R$ 602.500",
-        "Categoria": "Sedan"
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/MIJH0sq.png"
     },
     {
         "Carro": "Emperor SC300",
