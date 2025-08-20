@@ -2494,5 +2494,23 @@ const carrosData = [
         "Ano": "2006",
         "Valor": "70",
         "Categoria": "Sport"
+    },
+    {
+        "Carro": "Truffade Venom GT",
+        "Ano": "2016",
+        "Valor": "150 Moedas",
+        "Categoria": "Hyper"
+    },
+    {
+        "Carro": "Tuffade La Voiture Noire",
+        "Ano": "2021",
+        "Valor": "150 Moedas",
+        "Categoria": "Hyper"
+    },
+    {
+        "Carro": "Karin Evo IX ",
+        "Ano": "2006",
+        "Valor": "60 Moedas",
+        "Categoria": "Sedan"
     }
 ];
