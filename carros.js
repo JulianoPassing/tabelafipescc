@@ -2434,5 +2434,11 @@ const carrosData = [
         "Ano": "2010",
         "Valor": "R$ 200.000",
         "Categoria": "Sport"
+    },
+    {
+        "Carro": "Obey R8 Manual",
+        "Ano": "2010",
+        "Valor": "R$ 650.000",
+        "Categoria": "Sport"
     }
 ];
