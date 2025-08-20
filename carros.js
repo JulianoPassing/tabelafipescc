@@ -10,7 +10,7 @@ const carrosData = [
         "Ano": "1998",
         "Valor": "R$ 354.990",
         "Categoria": "Sedan",
-        "Imagem": "https://i.imgur.com/SzhX6D7.png"
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     },
     {
         "Carro": "Emperor GS430",
