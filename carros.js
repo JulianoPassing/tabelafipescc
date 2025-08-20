@@ -3,7 +3,8 @@ const carrosData = [
         "Carro": "Annis S15 LZ",
         "Ano": "1999",
         "Valor": "1 DLC",
-        "Categoria": "Sedan"
+        "Categoria": "Sedan",
+        "Imagem": "https://media.discordapp.net/attachments/1317127416648306698/1383575297974075483/image.png?ex=68a6f628&is=68a5a4a8&hm=22cd51c1b2ed29766d95b38d132998a168a095aa3bcd3f6ea884a717fc7b2ec5&=&format=webp&quality=lossless&width=1069&height=951"
     },
     {
         "Carro": "Annis Skyline ER34",
