@@ -2428,5 +2428,11 @@ const carrosData = [
         "Ano": "2019",
         "Valor": "180 Moedas",
         "Categoria": "Super"
+    },
+    {
+        "Carro": "Pfister Panamera",
+        "Ano": "2010",
+        "Valor": "R$ 200.000",
+        "Categoria": "Sport"
     }
 ];
