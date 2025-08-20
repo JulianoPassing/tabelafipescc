@@ -2458,5 +2458,11 @@ const carrosData = [
         "Ano": "1978",
         "Valor": "R$ 100.000",
         "Categoria": "Pick-up"
+    },
+    {
+        "Carro": "Karin 155 Q4",
+        "Ano": "1992",
+        "Valor": "R$ 80.000",
+        "Categoria": "Sedan"
     }
 ];
