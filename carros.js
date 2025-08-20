@@ -2476,5 +2476,11 @@ const carrosData = [
         "Ano": "2021",
         "Valor": "R$ 1.150.000",
         "Categoria": "Sedan"
+    },
+    {
+        "Carro": "Grotti 488 Spider",
+        "Ano": "2019",
+        "Valor": "100 Moedas",
+        "Categoria": "Sport"
     }
 ];
