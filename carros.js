@@ -2440,5 +2440,11 @@ const carrosData = [
         "Ano": "2010",
         "Valor": "R$ 650.000",
         "Categoria": "Sport"
+    },
+    {
+        "Carro": "Progen 570S",
+        "Ano": "2015",
+        "Valor": "R$ 850.000",
+        "Categoria": "Sport"
     }
 ];
