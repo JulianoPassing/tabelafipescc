@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoções - Tabela FIPES CC</title>
+    <link rel="icon" href="https://i.imgur.com/YULctuK.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Importar fontes */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --primary-color: #EAF207;
+            --primary-hover: #F4F740;
+            --primary-active: #C6C403;
+            --background-color: #0D0D0D;
+            --card-background: linear-gradient(135deg, #1C2333 0%, #2A3441 100%);
+            --text-color: #FFFFFF;
+            --text-secondary: #B0B0B0;
+            --border-color: #30363D;
+            --hover-color: #21262D;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #EAF207 0%, #F4F740 100%);
+            --gradient-secondary: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Animações avançadas */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(234, 242, 7, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(234, 242, 7, 0.6); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Scroll personalizado */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--background-color);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 10px;
+            border: 2px solid var(--background-color);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-hover);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background-color);
+            background-image: url('https://i.imgur.com/Wf7bGAO.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--text-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Partículas de fundo */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, rgba(234, 242, 7, 0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(244, 247, 64, 0.3), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(198, 196, 3, 0.3), transparent);
+            background-size: 100px 100px;
+            animation: float 6s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        header {
+            background: #131622;
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #ff4d4d 60%, #ffb347 100%);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 0 8px 2px #ff4d4d99;
+            z-index: 3;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 .fas {
+            margin-right: 15px;
+            font-size: 1.1em;
+            animation: pulse 2s infinite;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 30px;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 12px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .category {
+            background: var(--card-background);
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 15px 40px var(--shadow-color);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out forwards;
+            transition: all 0.4s ease;
+        }
+
+        .category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px var(--shadow-color);
+        }
+
+        .category h2 {
+            color: var(--text-color);
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 700;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .category-icon {
+            font-size: 1.5em;
+            animation: pulse 2s infinite;
+        }
+
+        .vehicles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .vehicle-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px var(--shadow-color);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vehicle-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px var(--shadow-color);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .vehicle-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .vehicle-name {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .vehicle-price {
+            background: var(--gradient-primary);
+            color: var(--background-color);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            text-align: center;
+            display: inline-block;
+            min-width: 100px;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(234, 242, 7, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .vehicle-card:hover .vehicle-price {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(234, 242, 7, 0.5);
+        }
+
+        /* Barra de Pesquisa */
+        .search-container {
+            background: var(--card-background);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 15px 40px var(--shadow-color);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .search-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .search-container input[type="text"] {
+            width: 100%;
+            padding: 20px 25px;
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-color);
+            font-size: 1.1em;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-container input[type="text"]::placeholder {
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .search-container input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 20px rgba(234, 242, 7, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .search-container input[type="text"]:focus::placeholder {
+            color: var(--primary-color);
+        }
+
+        .clear-btn {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--gradient-secondary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .clear-btn:hover {
+            transform: translateY(-50%) scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .clear-btn i {
+            font-size: 0.8em;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            main {
+                padding: 0 20px;
+            }
+            
+            .search-container {
+                padding: 25px;
+                margin-bottom: 30px;
+            }
+            
+            .search-container input[type="text"] {
+                padding: 18px 20px;
+                font-size: 1em;
+            }
+            
+            .clear-btn {
+                position: static;
+                transform: none;
+                margin-top: 15px;
+                width: 100%;
+                justify-content: center;
+                padding: 15px 20px;
+            }
+            
+            .clear-btn:hover {
+                transform: scale(1.02);
+            }
+            
+            .category {
+                padding: 25px;
+                margin-bottom: 30px;
+            }
+            
+            .category h2 {
+                font-size: 1.5em;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .vehicles-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .vehicle-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-car"></i>Promoções Especiais</h1>
+        <p>Veículos com Pontos de Influência Reduzidos</p>
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar ao Início</a>
+    </header>
+
+    <main>
+        <!-- Barra de Pesquisa -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="🔍 Pesquisar veículos..." />
+            <button class="clear-btn" onclick="clearSearch()">
+                <i class="fas fa-times"></i> Limpar
+            </button>
+        </div>
+
+        <!-- Trailers e Carretas -->
+        <div class="category">
+            <h2><span class="category-icon"><i class="fas fa-truck"></i></span>Trailers e Carretas</h2>
+            <div class="vehicles-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Trailer Carretinha DF/DR</div>
+                    <div class="vehicle-price">10 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Trailer Caminhão</div>
+                    <div class="vehicle-price">20 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Trailer 20 Metros</div>
+                    <div class="vehicle-price">50 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Trailer 2C Fechado</div>
+                    <div class="vehicle-price">60 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Trailer 3C Fechado</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Trailer 40 Metros</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Cvr COE</div>
+                    <div class="vehicle-price">75 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Trailer Carreta 4C</div>
+                    <div class="vehicle-price">75 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Trailer Carreta</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Caminhão 1C</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Cegonha</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Motos -->
+        <div class="category">
+            <h2><span class="category-icon"><i class="fas fa-motorcycle"></i></span>Motos</h2>
+            <div class="vehicles-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Dinka Africa Twin</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht S1000RR</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Kavasak H2</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aeronaves -->
+        <div class="category">
+            <h2><span class="category-icon"><i class="fas fa-plane"></i></span>Aeronaves</h2>
+            <div class="vehicles-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Cuban800</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Havok</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Seabreeze</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Velum2</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Frogger</div>
+                    <div class="vehicle-price">115 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Vestra</div>
+                    <div class="vehicle-price">115 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Nimbus</div>
+                    <div class="vehicle-price">125 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Swift2</div>
+                    <div class="vehicle-price">130 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Seasparrow</div>
+                    <div class="vehicle-price">150 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Supervolito</div>
+                    <div class="vehicle-price">225 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Conada</div>
+                    <div class="vehicle-price">275 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">AERO Volatus</div>
+                    <div class="vehicle-price">275 Moedas</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carros -->
+        <div class="category">
+            <h2><span class="category-icon"><i class="fas fa-car"></i></span>Carros</h2>
+            <div class="vehicles-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Vulkar XC90</div>
+                    <div class="vehicle-price">30 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Vapid Eleanor</div>
+                    <div class="vehicle-price">40 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Dinka Civic LF5</div>
+                    <div class="vehicle-price">50 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht X3 M40I</div>
+                    <div class="vehicle-price">50 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Vapid Focus RS</div>
+                    <div class="vehicle-price">50 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">GLS 63</div>
+                    <div class="vehicle-price">60 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Karin Corolla GR</div>
+                    <div class="vehicle-price">60 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Karin Evo 9</div>
+                    <div class="vehicle-price">60 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Lampadati GranTurismo MC Stradal</div>
+                    <div class="vehicle-price">60 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Obey RS3 2020</div>
+                    <div class="vehicle-price">60 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Obey Rs3 Sportback 22</div>
+                    <div class="vehicle-price">60 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Obey RS7 ABT</div>
+                    <div class="vehicle-price">60 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">WRX STI 2016</div>
+                    <div class="vehicle-price">60 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">M6 Coupe</div>
+                    <div class="vehicle-price">65 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Batley Bentayga Startech</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">BF Golf Mk8 R</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Cadillic Escalade</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Cayenne Turbo GT 22</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">GT2 RS 2012</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Karin GR86</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Karin Impreza Wrx 2022</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Supra A90</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Übermacht M3E46 GTR</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Übermacht X6 M Competition</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Vapid Mustang 2025</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Vapid Ranger Raptor</div>
+                    <div class="vehicle-price">70 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Annis RX-8</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Benefactor GLE 53 AGM</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Benefactor SL65</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Bravado Charger Hellcat</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Bravado Ram 2024</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Bravado Ram 3500 SuperDuty 5"Roc</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Camaro Exorcist</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">GT 86</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Lampadati Giulia GTAM 2021</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">M3 E92</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Masseti MC20</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Obey SQ7 2016 ABT</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pfister CarreraS Conversivel</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pfister Panamera 24</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht M4 CSL</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht M8 Competition</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Vapid Shelby F-250 Super Baja</div>
+                    <div class="vehicle-price">80 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Annis S-15</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Babus B800</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Bravado 400z Nismo</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Bravado Ham 2500</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Bravado Viper 2016</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Dawn Drophead</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Declasse C7</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Dewbauchee Vanquish 2025</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Dinka S2000</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Grotti F8 Tributo</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Maibatsu Evo X</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Obey RS6 Avant</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pfister STI WRX 2010</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">SLS 2012</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht M2 Competition</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht M3 E36</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht M3 F80</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht M3 G80</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht M5 E60</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht M5 F90 2018</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht M5 Touring G60</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht X7 2021</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Vapid F-150 Raptor</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Vapid Mustang GT</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Vapid Shelby GT500 2020</div>
+                    <div class="vehicle-price">90 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Alpina B7 G12</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Annis 180sx</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Annis 350z</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Annis R32</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Benefactor GT63-S</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Bravado Ram TRX</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Countach 2022</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Dewbaychee DB12 2023</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Grotti F12-TDF</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Karin Chaser JZX100</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Meca GT Black Series</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Obey R8 V10</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi 488 Spider</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi Diablo GTR</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi Sian Roadster</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pfister 911 GT2 RS Weissach</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pfister 992 GT3 RS</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pfister 992 GTS 2025</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pfister 993 S</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pfister Carrera GT</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Progen 600LT</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht M2 G87</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Ubermacht M3 G81 Touring</div>
+                    <div class="vehicle-price">100 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Annis GTR R35</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Annis R34</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Dewbauchee DB11</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Emperor LFA NB Pack</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Gordo Monri T-50</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Grotti 296 GTS</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Grotti PuroSangue</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Grotti SF90 Stradale</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Karin Supra Mk4</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi Aventador LP-700</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi Huracan</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi Huracam EVO Spyder</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi Sterrato 2023</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi Urus Performante</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">R35 2007 150 r mod</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">SF90 XX</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Vapid F450</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Vapid GT-40 2005</div>
+                    <div class="vehicle-price">110 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Grotti 488 Moedassta</div>
+                    <div class="vehicle-price">120 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Grotti 812 SuperFest</div>
+                    <div class="vehicle-price">120 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi Murciélago</div>
+                    <div class="vehicle-price">120 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi Svj Roadster</div>
+                    <div class="vehicle-price">120 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pfister 911 Turbo S</div>
+                    <div class="vehicle-price">120 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Progen Artura Spider</div>
+                    <div class="vehicle-price">120 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Progen P1</div>
+                    <div class="vehicle-price">120 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Revuelto</div>
+                    <div class="vehicle-price">128 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi Imola</div>
+                    <div class="vehicle-price">130 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pegassi STO 2022</div>
+                    <div class="vehicle-price">130 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Progen 765 LT</div>
+                    <div class="vehicle-price">130 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Koeg CC850</div>
+                    <div class="vehicle-price">150 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Principe Regera</div>
+                    <div class="vehicle-price">150 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Truffade La Voiture Noire</div>
+                    <div class="vehicle-price">150 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Truffade Venom GT</div>
+                    <div class="vehicle-price">150 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Mlaren Senna</div>
+                    <div class="vehicle-price">175 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Pfister 918 Spyder</div>
+                    <div class="vehicle-price">175 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Progen W1 2025</div>
+                    <div class="vehicle-price">175 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Venom F5 2022</div>
+                    <div class="vehicle-price">190 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Koneg Agera RS</div>
+                    <div class="vehicle-price">200 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Koneg Jesko</div>
+                    <div class="vehicle-price">200 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Truffade Chiron SuperSport 300+</div>
+                    <div class="vehicle-price">200 Moedas</div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-name">Benefactor ONE</div>
+                    <div class="vehicle-price">250 Moedas</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Função de pesquisa em tempo real
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            const vehicleCards = document.querySelectorAll('.vehicle-card');
+            
+            vehicleCards.forEach(card => {
+                const vehicleName = card.querySelector('.vehicle-name').textContent.toLowerCase();
+                const vehiclePrice = card.querySelector('.vehicle-price').textContent.toLowerCase();
+                
+                if (vehicleName.includes(searchTerm) || vehiclePrice.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeInUp 0.3s ease-out forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Mostrar/ocultar categorias vazias
+            const categories = document.querySelectorAll('.category');
+            categories.forEach(category => {
+                const visibleCards = category.querySelectorAll('.vehicle-card[style*="display: block"]').length;
+                const totalCards = category.querySelectorAll('.vehicle-card').length;
+                
+                if (visibleCards === 0 && searchTerm !== '') {
+                    category.style.display = 'none';
+                } else {
+                    category.style.display = 'block';
+                }
+            });
+        });
+
+        // Função para limpar pesquisa
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            const vehicleCards = document.querySelectorAll('.vehicle-card');
+            const categories = document.querySelectorAll('.category');
+            
+            vehicleCards.forEach(card => {
+                card.style.display = 'block';
+                card.style.animation = 'fadeInUp 0.3s ease-out forwards';
+            });
+            
+            categories.forEach(category => {
+                category.style.display = 'block';
+            });
+            
+            document.getElementById('searchInput').focus();
+        }
+
+        // Foco automático no campo de pesquisa
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('searchInput').focus();
+        });
+    </script>
+</body>
+</html>
