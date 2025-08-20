@@ -2494,5 +2494,11 @@ const carrosData = [
         "Ano": "2006",
         "Valor": "70",
         "Categoria": "Sport"
+    },
+    {
+        "Carro": "Truffade Venom GT",
+        "Ano": "2016",
+        "Valor": "150 Moedas",
+        "Categoria": "Hyper"
     }
 ];
