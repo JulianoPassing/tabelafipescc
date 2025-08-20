@@ -2470,5 +2470,11 @@ const carrosData = [
         "Ano": "2023",
         "Valor": "R$ 980.000",
         "Categoria": "SUV"
+    },
+    {
+        "Carro": "Ubermacht M4 Cabrio G83",
+        "Ano": "2021",
+        "Valor": "R$ 1.150.000",
+        "Categoria": "Sedan"
     }
 ];
