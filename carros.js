@@ -2452,5 +2452,11 @@ const carrosData = [
         "Ano": "2024",
         "Valor": "R$ 540.000",
         "Categoria": "Sport"
+    },
+    {
+        "Carro": "Vapid F-150 Lift",
+        "Ano": "1978",
+        "Valor": "R$ 100.000",
+        "Categoria": "Pick-up"
     }
 ];
