@@ -2488,5 +2488,11 @@ const carrosData = [
         "Ano": "2025",
         "Valor": "80 Moedas",
         "Categoria": "Pick-up"
+    },
+    {
+        "Carro": "Ubermacht M3 E46 GTR",
+        "Ano": "2006",
+        "Valor": "70",
+        "Categoria": "Sport"
     }
 ];
