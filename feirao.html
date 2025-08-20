@@ -135,10 +135,10 @@
             right: 30px;
             width: 10px;
             height: 10px;
-            background: radial-gradient(circle, #ff4d4d 60%, #ffb347 100%);
+            background: var(--gradient-secondary);
             border-radius: 50%;
             transform: translateY(-50%);
-            box-shadow: 0 0 8px 2px #ff4d4d99;
+            box-shadow: 0 0 8px 2px var(--shadow-color);
             z-index: 3;
         }
 
@@ -323,16 +323,16 @@
         }
 
         .negociacao {
-            color: #00e676;
+            color: #4CAF50;
             font-weight: bold;
             transition: all 0.3s ease;
         }
 
         /* Efeito destaque animado */
         .negociacao-destaque {
-            background: #fffbe6;
-            color: #ff9800 !important;
-            box-shadow: 0 0 16px 4px #ffe082;
+            background: rgba(255, 255, 255, 0.1);
+            color: #FF9800 !important;
+            box-shadow: 0 0 16px 4px var(--shadow-color);
             border-radius: 8px;
             padding: 4px 10px;
             transform: scale(1.18);

@@ -28,9 +28,6 @@
             --shadow-color: rgba(0, 0, 0, 0.4);
             --gradient-primary: linear-gradient(135deg, #EAF207 0%, #F4F740 100%);
             --gradient-secondary: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
-            --success-color: #4CAF50;
-            --warning-color: #FF9800;
-            --danger-color: #F44336;
         }
 
         * {
@@ -143,10 +140,10 @@
             right: 30px;
             width: 10px;
             height: 10px;
-            background: radial-gradient(circle, #ff4d4d 60%, #ffb347 100%);
+            background: var(--gradient-secondary);
             border-radius: 50%;
             transform: translateY(-50%);
-            box-shadow: 0 0 8px 2px #ff4d4d99;
+            box-shadow: 0 0 8px 2px var(--shadow-color);
             z-index: 3;
         }
 
@@ -374,17 +371,17 @@
         }
 
         .btn-success {
-            background: var(--success-color);
+            background: #4CAF50;
             color: white;
         }
 
         .btn-warning {
-            background: var(--warning-color);
+            background: #FF9800;
             color: white;
         }
 
         .btn-danger {
-            background: var(--danger-color);
+            background: #F44336;
             color: white;
         }
 
@@ -610,7 +607,7 @@
         }
 
         .image-preview .close-btn:hover {
-            background: #d32f2f;
+            background: #F44336;
             transform: scale(1.1);
         }
 
@@ -643,20 +640,20 @@
 
         .alert-success {
             background: rgba(76, 175, 80, 0.2);
-            border: 1px solid var(--success-color);
-            color: var(--success-color);
+            border: 1px solid #4CAF50;
+            color: #4CAF50;
         }
 
         .alert-error {
             background: rgba(244, 67, 54, 0.2);
-            border: 1px solid var(--danger-color);
-            color: var(--danger-color);
+            border: 1px solid #F44336;
+            color: #F44336;
         }
 
         .alert-warning {
             background: rgba(255, 152, 0, 0.2);
-            border: 1px solid var(--warning-color);
-            color: var(--warning-color);
+            border: 1px solid #FF9800;
+            color: #FF9800;
         }
 
         footer {
@@ -827,7 +824,7 @@
                 <span><i class="fas fa-cogs"></i> Painel de Gerenciamento</span>
                 <div style="display: flex; gap: 10px; align-items: center;">
                     <button class="btn btn-primary" onclick="setupGitHubConfig()" style="
-                        background: #4A90E2;
+                        background: var(--gradient-primary);
                         color: white;
                         border: none;
                         padding: 8px 15px;
@@ -852,7 +849,7 @@
                     </button>
 
                     <button class="btn btn-secondary" onclick="resetLocalData()" style="
-                        background: #6C757D;
+                        background: var(--text-secondary);
                         color: white;
                         border: none;
                         padding: 8px 15px;
