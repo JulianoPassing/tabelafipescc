@@ -54,7 +54,8 @@ const carrosData = [
         "Carro": "Karin Celsior",
         "Ano": "1989",
         "Valor": "R$ 246.990",
-        "Categoria": "Sedan"
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/tAvL416.png"
     },
     {
         "Carro": "Karin Chaser 90",
