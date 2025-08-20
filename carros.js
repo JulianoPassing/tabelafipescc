@@ -1,5 +1,42 @@
 const carrosData = [
     {
+        "Carro": "Annis S15 LZ",
+        "Ano": "1999",
+        "Valor": "1 DLC",
+        "Categoria": "Sedan"
+    },
+    {
+        "Carro": "Annis Skyline ER34",
+        "Ano": "1998",
+        "Valor": "R$ 354.990",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/SzhX6D7.png"
+    },
+    {
+        "Carro": "Emperor GS430",
+        "Ano": "2000",
+        "Valor": "120 Moedas",
+        "Categoria": "Sedan"
+    },
+    {
+        "Carro": "Emperor IS300",
+        "Ano": "1999",
+        "Valor": "140 Moedas",
+        "Categoria": "Sedan"
+    },
+    {
+        "Carro": "Emperor RCF",
+        "Ano": "2014",
+        "Valor": "R$ 602.500",
+        "Categoria": "Sedan"
+    },
+    {
+        "Carro": "Emperor SC300",
+        "Ano": "1991",
+        "Valor": "120 Moedas",
+        "Categoria": "Sedan"
+    },
+    {
         "Carro": "Grotti 599 FD",
         "Ano": "2006",
         "Valor": "100 Moedas",
@@ -2344,173 +2381,5 @@ const carrosData = [
         "Ano": "2026",
         "Valor": "1000",
         "Categoria": "super"
-    },
-    {
-        "Carro": "Testee J33H",
-        "Ano": "2000",
-        "Valor": "R$ 1.500",
-        "Categoria": "Alto"
-    },
-    {
-        "Carro": "Dewbauchee Vantage Roadster ",
-        "Ano": "2022",
-        "Valor": "R$ 2.250.000",
-        "Categoria": "Sport"
-    },
-    {
-        "Carro": "BF Parati G4 Surf ",
-        "Ano": "2010",
-        "Valor": "R$ 63.900",
-        "Categoria": "SUV"
-    },
-    {
-        "Carro": "Ubermacht I8 ",
-        "Ano": "2015",
-        "Valor": "R$ 625.590",
-        "Categoria": "Coupe"
-    },
-    {
-        "Carro": "BF Tera ",
-        "Ano": "2025",
-        "Valor": "R$ 145.890",
-        "Categoria": "SUV"
-    },
-    {
-        "Carro": "Ubermacht 1M Coupe ",
-        "Ano": "2011",
-        "Valor": "R$ 340.000",
-        "Categoria": "Coupe"
-    },
-    {
-        "Carro": "Coil CyberTruck",
-        "Ano": "2023",
-        "Valor": "R$ 250.000",
-        "Categoria": "Off-Road"
-    },
-    {
-        "Carro": "Ubermacht M5 G60 ",
-        "Ano": "2024",
-        "Valor": "R$ 905.000",
-        "Categoria": "Sedan"
-    },
-    {
-        "Carro": "Vapid Focus RS",
-        "Ano": "2017",
-        "Valor": "100 Moedas",
-        "Categoria": "Hatch"
-    },
-    {
-        "Carro": "Annis RX-8",
-        "Ano": "2011",
-        "Valor": "160 Moedas",
-        "Categoria": "Sedan"
-    },
-    {
-        "Carro": "Declasse Hennessey Camaro Exorcist",
-        "Ano": "2020",
-        "Valor": "160 Moedas",
-        "Categoria": "Sport"
-    },
-    {
-        "Carro": "Pegassi Diablo GTR",
-        "Ano": "1999",
-        "Valor": "200 Moedas",
-        "Categoria": "Super"
-    },
-    {
-        "Carro": "Pegassi Sian Roadster",
-        "Ano": "2020",
-        "Valor": "200 Moedas",
-        "Categoria": "Super"
-    },
-    {
-        "Carro": "Grotti F8 Tributo",
-        "Ano": "2019",
-        "Valor": "180 Moedas",
-        "Categoria": "Super"
-    },
-    {
-        "Carro": "Pfister Panamera",
-        "Ano": "2010",
-        "Valor": "R$ 200.000",
-        "Categoria": "Sport"
-    },
-    {
-        "Carro": "Obey R8 Manual",
-        "Ano": "2010",
-        "Valor": "R$ 650.000",
-        "Categoria": "Sport"
-    },
-    {
-        "Carro": "Progen 570S",
-        "Ano": "2015",
-        "Valor": "R$ 850.000",
-        "Categoria": "Sport"
-    },
-    {
-        "Carro": "Pfister 718 Spyder RS",
-        "Ano": "2024",
-        "Valor": "R$ 540.000",
-        "Categoria": "Sport"
-    },
-    {
-        "Carro": "Vapid F-150 Lift",
-        "Ano": "1978",
-        "Valor": "R$ 100.000",
-        "Categoria": "Pick-up"
-    },
-    {
-        "Carro": "Karin 155 Q4",
-        "Ano": "1992",
-        "Valor": "R$ 80.000",
-        "Categoria": "Sedan"
-    },
-    {
-        "Carro": "Ubermacht X5M",
-        "Ano": "2023",
-        "Valor": "R$ 980.000",
-        "Categoria": "SUV"
-    },
-    {
-        "Carro": "Ubermacht M4 Cabrio G83",
-        "Ano": "2021",
-        "Valor": "R$ 1.150.000",
-        "Categoria": "Sedan"
-    },
-    {
-        "Carro": "Grotti 488 Spider",
-        "Ano": "2019",
-        "Valor": "100 Moedas",
-        "Categoria": "Sport"
-    },
-    {
-        "Carro": "Vapid Shelby F-250 Super Baja",
-        "Ano": "2025",
-        "Valor": "80 Moedas",
-        "Categoria": "Pick-up"
-    },
-    {
-        "Carro": "Ubermacht M3 E46 GTR",
-        "Ano": "2006",
-        "Valor": "70",
-        "Categoria": "Sport"
-    },
-    {
-        "Carro": "Truffade Venom GT",
-        "Ano": "2016",
-        "Valor": "150 Moedas",
-        "Categoria": "Hyper"
-    },
-    {
-        "Carro": "Tuffade La Voiture Noire",
-        "Ano": "2021",
-        "Valor": "150 Moedas",
-        "Categoria": "Hyper"
-    },
-    {
-        "Carro": "Karin Evo IX ",
-        "Ano": "2006",
-        "Valor": "60 Moedas",
-        "Categoria": "Sedan"
     }
 ];
