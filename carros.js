@@ -2506,5 +2506,11 @@ const carrosData = [
         "Ano": "2021",
         "Valor": "150 Moedas",
         "Categoria": "Hyper"
+    },
+    {
+        "Carro": "Karin Evo IX ",
+        "Ano": "2006",
+        "Valor": "60 Moedas",
+        "Categoria": "Sedan"
     }
 ];
