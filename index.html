@@ -529,6 +529,11 @@
                 <div class="vehicles-grid" id="leilaoGrid"></div>
             </div>
 
+            <div class="category" id="aeronavesCategory">
+                <h2><span class="category-icon"><i class="fas fa-plane"></i></span>Aeronaves</h2>
+                <div class="vehicles-grid" id="aeronavesGrid"></div>
+            </div>
+
             <div class="category" id="barcosCategory">
                 <h2><span class="category-icon"><i class="fas fa-anchor"></i></span>Barcos</h2>
                 <div class="vehicles-grid" id="barcosGrid"></div>
@@ -570,6 +575,7 @@
             const dlcGrid = document.getElementById('dlcGrid');
             const pontosEventoGrid = document.getElementById('pontosEventoGrid');
             const leilaoGrid = document.getElementById('leilaoGrid');
+            const aeronavesGrid = document.getElementById('aeronavesGrid');
             const barcosGrid = document.getElementById('barcosGrid');
 
             // Limpa todos os grids
@@ -578,13 +584,16 @@
             dlcGrid.innerHTML = '';
             pontosEventoGrid.innerHTML = '';
             leilaoGrid.innerHTML = '';
+            aeronavesGrid.innerHTML = '';
             barcosGrid.innerHTML = '';
 
             carsToDisplay.forEach(car => {
                 const vehicleCard = createVehicleCard(car);
 
                 // Distribui os carros para o grid correto com base no valor ou categoria
-                if (car.Categoria && car.Categoria.toLowerCase() === 'boat') {
+                if (car.Categoria && car.Categoria.toLowerCase() === 'aeronaves') {
+                    aeronavesGrid.appendChild(vehicleCard);
+                } else if (car.Categoria && car.Categoria.toLowerCase() === 'boat') {
                     barcosGrid.appendChild(vehicleCard);
                 } else if (car.Valor.includes('R$')) {
                     dinheiroGrid.appendChild(vehicleCard);
