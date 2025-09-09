@@ -152,5 +152,12 @@ const carrosData = [
         "Valor": "220 Moedas",
         "Categoria": "Truck",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Mack 53",
+        "Ano": "1953",
+        "Valor": "R$50.000",
+        "Categoria": "Truck",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
