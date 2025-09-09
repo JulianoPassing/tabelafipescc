@@ -75,5 +75,12 @@ const carrosData = [
         "Valor": "40 Moedas",
         "Categoria": "Trailer",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Trailer 20 Metros",
+        "Ano": "2025",
+        "Valor": "100 Moedas",
+        "Categoria": "Trailer",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
