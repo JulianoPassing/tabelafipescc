@@ -257,5 +257,12 @@ const carrosData = [
         "Valor": "R$52.990",
         "Categoria": "Hatch",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Fusion V6 AWD",
+        "Ano": "2012",
+        "Valor": "R$53.990",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
