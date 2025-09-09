@@ -36,7 +36,7 @@ const carrosData = [
     },
     {
         "Carro": "Poshe 911 TurboS",
-        "Ano": "2018",
+        "Ano": "2019",
         "Valor": "180 Moedas",
         "Categoria": "Sport",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
