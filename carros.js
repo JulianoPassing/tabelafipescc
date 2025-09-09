@@ -61,5 +61,12 @@ const carrosData = [
         "Valor": "Leilão",
         "Categoria": "Super",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Trailer Carretinha DF/DR",
+        "Ano": "2025",
+        "Valor": "20 Moedas",
+        "Categoria": "Trailer",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
