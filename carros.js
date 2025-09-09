@@ -166,5 +166,12 @@ const carrosData = [
         "Valor": "R$52.000",
         "Categoria": "Trailer",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Trailer CT",
+        "Ano": "2025",
+        "Valor": "R$62.000",
+        "Categoria": "Trailer",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
