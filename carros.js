@@ -145,5 +145,12 @@ const carrosData = [
         "Valor": "200 Moedas",
         "Categoria": "Truck",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Cegonha",
+        "Ano": "2014",
+        "Valor": "220 Moedas",
+        "Categoria": "Truck",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
