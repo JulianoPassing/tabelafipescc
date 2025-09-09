@@ -26,5 +26,12 @@ const carrosData = [
         "Valor": "160 Moedas",
         "Categoria": "Sport",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Aidu RS6 C8",
+        "Ano": "2020",
+        "Valor": "180 Moedas",
+        "Categoria": "Wagon",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
