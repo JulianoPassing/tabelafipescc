@@ -103,5 +103,12 @@ const carrosData = [
         "Valor": "140 Moedas",
         "Categoria": "Trailer",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Vapid F-350 5ª Roda",
+        "Ano": "2020",
+        "Valor": "140 Moedas",
+        "Categoria": "Off-road",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
