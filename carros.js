@@ -180,5 +180,12 @@ const carrosData = [
         "Valor": "R$95.000",
         "Categoria": "Truck",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "VW Titan",
+        "Ano": "1999",
+        "Valor": "R$135.900",
+        "Categoria": "Truck",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
