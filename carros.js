@@ -292,5 +292,12 @@ const carrosData = [
         "Valor": "R$88.990",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Civic SI",
+        "Ano": "2009",
+        "Valor": "R$114.590",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
