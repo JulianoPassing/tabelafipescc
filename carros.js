@@ -110,5 +110,12 @@ const carrosData = [
         "Valor": "140 Moedas",
         "Categoria": "Off-road",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Bravado Ram 3500 SuperDuty 5ª Roda",
+        "Ano": "2010",
+        "Valor": "140 Moedas",
+        "Categoria": "Off-road",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
