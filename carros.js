@@ -201,5 +201,12 @@ const carrosData = [
         "Valor": "R$150.00",
         "Categoria": "Truck",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "NL12",
+        "Ano": "1900",
+        "Valor": "R$160.00",
+        "Categoria": "Truck",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
