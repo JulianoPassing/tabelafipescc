@@ -271,5 +271,12 @@ const carrosData = [
         "Valor": "R$59.990",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Schyster I30",
+        "Ano": "2011",
+        "Valor": "R$75.550",
+        "Categoria": "Hatch",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
