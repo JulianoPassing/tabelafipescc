@@ -285,5 +285,12 @@ const carrosData = [
         "Valor": "R$87.990",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Jetta TSI",
+        "Ano": "2013",
+        "Valor": "R$88.990",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
