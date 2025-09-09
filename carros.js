@@ -40,5 +40,12 @@ const carrosData = [
         "Valor": "180 Moedas",
         "Categoria": "Sport",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Niffan R34 V-Spec",
+        "Ano": "1999",
+        "Valor": "200 Moedas",
+        "Categoria": "Sport",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
