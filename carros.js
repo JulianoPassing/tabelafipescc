@@ -278,5 +278,12 @@ const carrosData = [
         "Valor": "R$75.550",
         "Categoria": "Hatch",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Karin Corolla",
+        "Ano": "2020",
+        "Valor": "R$87.990",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
