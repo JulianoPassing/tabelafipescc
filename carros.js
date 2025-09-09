@@ -54,5 +54,12 @@ const carrosData = [
         "Valor": "200 Moedas",
         "Categoria": "Off-road",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "F-40 Exclusive",
+        "Ano": "1987",
+        "Valor": "Leilão",
+        "Categoria": "Super",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
