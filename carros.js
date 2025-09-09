@@ -250,5 +250,12 @@ const carrosData = [
         "Valor": "R$44.990",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Golf Sportline",
+        "Ano": "2012",
+        "Valor": "R$52.990",
+        "Categoria": "Hatch",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
