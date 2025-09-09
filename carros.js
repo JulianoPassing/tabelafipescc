@@ -306,5 +306,12 @@ const carrosData = [
         "Valor": "R$132.990",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Friat Fastback",
+        "Ano": "2025",
+        "Valor": "R$135.990",
+        "Categoria": "Suv",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
