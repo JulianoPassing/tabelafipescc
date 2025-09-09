@@ -57,7 +57,7 @@ const carrosData = [
     },
     {
         "Carro": "F-40 Exclusive",
-        "Ano": "1987",
+        "Ano": "1985",
         "Valor": "Leilão",
         "Categoria": "Super",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
