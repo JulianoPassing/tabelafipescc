@@ -243,5 +243,12 @@ const carrosData = [
         "Valor": "R$670.000",
         "Categoria": "Truck",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Marea HLX",
+        "Ano": "2007",
+        "Valor": "R$44.990",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
