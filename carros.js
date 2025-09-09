@@ -12,5 +12,12 @@ const carrosData = [
         "Valor": "120 Moedas",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Furd Mustang",
+        "Ano": "2025",
+        "Valor": "140 Moedas",
+        "Categoria": "Muscle",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
