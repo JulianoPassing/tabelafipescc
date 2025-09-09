@@ -60,18 +60,19 @@ function showAlert(message, type) {
 // Função para carregar dados dos carros
 function loadCarsData() {
     try {
-        // Carrega dados do localStorage ou usa dados padrão
+        // Sempre carrega dados do arquivo carros.js primeiro
+        allCarsData = [...carrosData]; // Usa dados do arquivo carros.js
+        saveCarsData(); // Salva no localStorage para manter sincronizado
+        populateTable();
+    } catch (error) {
+        console.error('Erro ao carregar dados dos carros:', error);
+        // Fallback: tenta carregar do localStorage se carros.js falhar
         const savedData = localStorage.getItem('carrosData');
         if (savedData) {
             allCarsData = JSON.parse(savedData);
         } else {
-            allCarsData = [...carrosData]; // Usa dados do arquivo carros.js
-            saveCarsData();
+            allCarsData = [];
         }
-        populateTable();
-    } catch (error) {
-        console.error('Erro ao carregar dados dos carros:', error);
-        allCarsData = [];
         populateTable();
     }
 }
