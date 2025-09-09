@@ -47,5 +47,12 @@ const carrosData = [
         "Valor": "200 Moedas",
         "Categoria": "Sport",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Dudge Ram TRX",
+        "Ano": "2020",
+        "Valor": "200 Moedas",
+        "Categoria": "Off-road",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
