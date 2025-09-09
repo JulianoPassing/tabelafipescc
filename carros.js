@@ -19,5 +19,12 @@ const carrosData = [
         "Valor": "140 Moedas",
         "Categoria": "Muscle",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "BWM M5 E60 V10",
+        "Ano": "2005",
+        "Valor": "160 Moedas",
+        "Categoria": "Sport",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
