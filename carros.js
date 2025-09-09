@@ -264,5 +264,12 @@ const carrosData = [
         "Valor": "R$53.990",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Vulcar C30",
+        "Ano": "2013",
+        "Valor": "R$59.990",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
