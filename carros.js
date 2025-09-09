@@ -299,5 +299,12 @@ const carrosData = [
         "Valor": "R$114.590",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Civic G10",
+        "Ano": "2018",
+        "Valor": "R$132.990",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
