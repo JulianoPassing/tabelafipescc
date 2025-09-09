@@ -117,5 +117,12 @@ const carrosData = [
         "Valor": "140 Moedas",
         "Categoria": "Off-road",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "CVR Coe",
+        "Ano": "1941",
+        "Valor": "150 Moedas",
+        "Categoria": "Truck",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
