@@ -327,5 +327,12 @@ const carrosData = [
         "Valor": "135.990",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "BF Golf Variant",
+        "Ano": "2016",
+        "Valor": "106.990",
+        "Categoria": "SUV",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
