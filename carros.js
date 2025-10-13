@@ -320,5 +320,12 @@ const carrosData = [
         "Valor": "72.550",
         "Categoria": "Hatch",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Obey A3 TFSI 2.0",
+        "Ano": "2015",
+        "Valor": "135.990",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
