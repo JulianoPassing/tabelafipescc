@@ -348,5 +348,12 @@ const carrosData = [
         "Valor": "275.500",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Nagasaki ZX10-R",
+        "Ano": "2016",
+        "Valor": "75.990",
+        "Categoria": "Moto",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
