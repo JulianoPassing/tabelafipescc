@@ -341,5 +341,12 @@ const carrosData = [
         "Valor": "226.990",
         "Categoria": "Off-Road",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Ubermacht M240I",
+        "Ano": "2017",
+        "Valor": "275.500",
+        "Categoria": "Coupe",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
