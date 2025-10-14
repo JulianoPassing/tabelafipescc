@@ -453,5 +453,12 @@ const carrosData = [
         "Valor": "180 Moedas",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Pfister Panamera",
+        "Ano": "2023",
+        "Valor": "120 Moedas",
+        "Categoria": "Sport",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
