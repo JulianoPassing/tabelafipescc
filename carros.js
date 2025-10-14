@@ -432,5 +432,12 @@ const carrosData = [
         "Valor": "200 Moedas",
         "Categoria": "Super",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Invetero Corvette C6",
+        "Ano": "2010",
+        "Valor": "160 Moedas",
+        "Categoria": "Sport",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
