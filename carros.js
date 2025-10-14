@@ -362,5 +362,12 @@ const carrosData = [
         "Valor": "140 Moedas",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Maibatsu EVO X",
+        "Ano": "2014",
+        "Valor": "80 Moedas",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
