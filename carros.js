@@ -317,7 +317,7 @@ const carrosData = [
     {
         "Carro": "Troupe 208 GT",
         "Ano": "2016",
-        "Valor": "72.550",
+        "Valor": "R$ 72.550",
         "Categoria": "Hatch",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     },
