@@ -408,7 +408,7 @@ const carrosData = [
     {
         "Carro": "BF Golf GTI MK7",
         "Ano": "2014",
-        "Valor": "165.990",
+        "Valor": "R$ 165.990",
         "Categoria": "Hatch",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     },
