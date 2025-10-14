@@ -418,5 +418,12 @@ const carrosData = [
         "Valor": "R$ 139.500",
         "Categoria": "Off-Road",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "BF Jetta Variant",
+        "Ano": "2011",
+        "Valor": "R$ 74.990",
+        "Categoria": "SUV",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
