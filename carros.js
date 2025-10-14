@@ -402,7 +402,7 @@ const carrosData = [
         "Carro": "Ubermacht M3 G80",
         "Ano": "2022",
         "Valor": "R$ 902.990",
-        "Categoria": "Sedan",
+        "Categoria": "Sport",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     },
     {
