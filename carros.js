@@ -360,7 +360,7 @@ const carrosData = [
         "Carro": "Ubermacht M4",
         "Ano": "2016",
         "Valor": "140 Moedas",
-        "Categoria": "Coupe",
+        "Categoria": "Sport",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     },
     {
