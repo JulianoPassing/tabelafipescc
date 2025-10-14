@@ -425,5 +425,12 @@ const carrosData = [
         "Valor": "R$ 74.990",
         "Categoria": "SUV",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Emperor LFA",
+        "Ano": "2011",
+        "Valor": "200 Moedas",
+        "Categoria": "Super",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
