@@ -376,5 +376,12 @@ const carrosData = [
         "Valor": "180 Moedas",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Benefactor G63 AMG",
+        "Ano": "2020",
+        "Valor": "120 Moedas",
+        "Categoria": "SUV",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
