@@ -390,5 +390,12 @@ const carrosData = [
         "Valor": "180 Moedas",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Obey RS4",
+        "Ano": "2020",
+        "Valor": "120 Moedas",
+        "Categoria": "SUV",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
