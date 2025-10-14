@@ -374,7 +374,7 @@ const carrosData = [
         "Carro": "Bravado Charger ",
         "Ano": "2021",
         "Valor": "180 Moedas",
-        "Categoria": "Sedan",
+        "Categoria": "Sport",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     },
     {
