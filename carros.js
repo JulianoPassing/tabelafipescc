@@ -388,7 +388,7 @@ const carrosData = [
         "Carro": "Ubermacht M3 F80",
         "Ano": "2016",
         "Valor": "180 Moedas",
-        "Categoria": "Sedan",
+        "Categoria": "Sport",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     },
     {
