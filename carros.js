@@ -439,5 +439,12 @@ const carrosData = [
         "Valor": "160 Moedas",
         "Categoria": "Sport",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Grotti Puro-Sangue",
+        "Ano": "2024",
+        "Valor": "140 Moedas",
+        "Categoria": "SUV",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
