@@ -338,7 +338,7 @@ const carrosData = [
     {
         "Carro": "Vapid F-250",
         "Ano": "2008",
-        "Valor": "226.990",
+        "Valor": "R$ 226.990",
         "Categoria": "Off-Road",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     },
