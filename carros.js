@@ -411,5 +411,12 @@ const carrosData = [
         "Valor": "165.990",
         "Categoria": "Hatch",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Truller T-4",
+        "Ano": "2007",
+        "Valor": "R$ 139.500",
+        "Categoria": "Off-Road",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
