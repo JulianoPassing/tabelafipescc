@@ -498,7 +498,7 @@ const carrosData = [
     },
     {
         "Carro": "Annis Miata MX5",
-        "Ano": "0000",
+        "Ano": "1994",
         "Valor": "R$ 199.990",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
