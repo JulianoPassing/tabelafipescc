@@ -649,5 +649,12 @@ const carrosData = [
         "Valor": "160 Moedas",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Karin Supra A80",
+        "Ano": "2002",
+        "Valor": "200 Moedas",
+        "Categoria": "Coupe",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
