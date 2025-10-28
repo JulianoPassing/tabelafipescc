@@ -607,5 +607,12 @@ const carrosData = [
         "Valor": "140 Moedas",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Annis S13",
+        "Ano": "1990",
+        "Valor": "140 Moedas",
+        "Categoria": "Coupe",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
