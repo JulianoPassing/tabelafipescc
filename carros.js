@@ -502,5 +502,12 @@ const carrosData = [
         "Valor": "R$ 199.990",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Dinka S2000",
+        "Ano": "2005",
+        "Valor": "R$ 223.550",
+        "Categoria": "Coupe",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
