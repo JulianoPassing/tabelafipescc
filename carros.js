@@ -537,5 +537,12 @@ const carrosData = [
         "Valor": "R$ 319.880",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Karin Celsior UCF10",
+        "Ano": "1994",
+        "Valor": "R$ 338.990",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
