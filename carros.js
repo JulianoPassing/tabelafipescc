@@ -558,5 +558,12 @@ const carrosData = [
         "Valor": "R$ 422.890",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Annis ER34N",
+        "Ano": "2001",
+        "Valor": "R$ 425.990",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
