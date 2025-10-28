@@ -525,7 +525,7 @@ const carrosData = [
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     },
     {
-        "Carro": "Karin Chaser Mark II",
+        "Carro": "Karin Chaser Mark II JZX90",
         "Ano": "1990",
         "Valor": "R$ 299.990",
         "Categoria": "Sedan",
