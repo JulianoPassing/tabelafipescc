@@ -684,5 +684,12 @@ const carrosData = [
         "Valor": "1 DLC",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Progen P1 Pro-Spec",
+        "Ano": "2013",
+        "Valor": "1 DLC",
+        "Categoria": "Super",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
