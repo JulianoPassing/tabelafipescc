@@ -551,5 +551,12 @@ const carrosData = [
         "Valor": "R$ 378.990",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Karin Chaser",
+        "Ano": "1990",
+        "Valor": "R$ 422.890",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
