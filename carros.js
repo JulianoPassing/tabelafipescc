@@ -593,5 +593,12 @@ const carrosData = [
         "Valor": "120 Moedas",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Annis RX-8",
+        "Ano": "2011",
+        "Valor": "140 Moedas",
+        "Categoria": "Coupe",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
