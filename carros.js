@@ -572,5 +572,12 @@ const carrosData = [
         "Valor": "R$ 437.990",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Emperor SC300",
+        "Ano": "2000",
+        "Valor": "60 Moedas",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
