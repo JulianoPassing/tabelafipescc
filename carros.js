@@ -484,7 +484,7 @@ const carrosData = [
     },
     {
         "Carro": "Annis Cefiro A31",
-        "Ano": "0000",
+        "Ano": "1990",
         "Valor": "R$ 195.990",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
