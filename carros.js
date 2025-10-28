@@ -518,10 +518,10 @@ const carrosData = [
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     },
     {
-        "Carro": "Emperor GS430",
-        "Ano": "2004",
-        "Valor": "R$ 242.550",
-        "Categoria": "Sedan",
+        "Carro": "Annis 300ZX Z-32",
+        "Ano": "0000",
+        "Valor": "R$ 281.990",
+        "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
