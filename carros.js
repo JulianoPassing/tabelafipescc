@@ -565,5 +565,12 @@ const carrosData = [
         "Valor": "R$ 425.990",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Karin Supra A70",
+        "Ano": "1990",
+        "Valor": "R$ 437.990",
+        "Categoria": "Coupe",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
