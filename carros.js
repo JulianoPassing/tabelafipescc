@@ -470,7 +470,7 @@ const carrosData = [
     },
     {
         "Carro": "Annis 240z",
-        "Ano": "0000",
+        "Ano": "1973",
         "Valor": "R$ 142.590",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
