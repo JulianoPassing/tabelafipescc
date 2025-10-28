@@ -488,5 +488,12 @@ const carrosData = [
         "Valor": "R$ 195.990",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Annis Laurel C35",
+        "Ano": "2002",
+        "Valor": "R$ 197.890",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
