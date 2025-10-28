@@ -579,5 +579,12 @@ const carrosData = [
         "Valor": "60 Moedas",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Emperor IS300",
+        "Ano": "2005",
+        "Valor": "120 Moedas",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
