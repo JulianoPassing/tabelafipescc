@@ -519,7 +519,7 @@ const carrosData = [
     },
     {
         "Carro": "Annis 300ZX Z-32",
-        "Ano": "0000",
+        "Ano": "2000",
         "Valor": "R$ 281.990",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
