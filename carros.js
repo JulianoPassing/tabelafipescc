@@ -670,5 +670,12 @@ const carrosData = [
         "Valor": "1 DLC",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Annis S15 Pro-Spec",
+        "Ano": "2002",
+        "Valor": "1 DLC",
+        "Categoria": "Coupe",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
