@@ -509,5 +509,12 @@ const carrosData = [
         "Valor": "R$ 223.550",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Karin JZX",
+        "Ano": "1981",
+        "Valor": "R$ 235.590",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
