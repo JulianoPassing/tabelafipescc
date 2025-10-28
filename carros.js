@@ -474,5 +474,12 @@ const carrosData = [
         "Valor": "R$ 142.590",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Karin Cresta",
+        "Ano": "1981",
+        "Valor": "R$ 177.990",
+        "Categoria": "Sedan",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
