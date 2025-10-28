@@ -544,5 +544,12 @@ const carrosData = [
         "Valor": "R$ 338.990",
         "Categoria": "Sedan",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Annis 370z",
+        "Ano": "2014",
+        "Valor": "R$ 378.990",
+        "Categoria": "Coupe",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
