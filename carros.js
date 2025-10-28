@@ -460,5 +460,12 @@ const carrosData = [
         "Valor": "120 Moedas",
         "Categoria": "Sport",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Karin Levin",
+        "Ano": "0000",
+        "Valor": "R$ 127.990",
+        "Categoria": "Coupe",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
