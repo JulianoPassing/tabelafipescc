@@ -663,5 +663,12 @@ const carrosData = [
         "Valor": "1 DLC",
         "Categoria": "Coupe",
         "Imagem": "https://i.imgur.com/Wf7bGAO.png"
+    },
+    {
+        "Carro": "Annis 370z Pro-Spec",
+        "Ano": "2020",
+        "Valor": "1 DLC",
+        "Categoria": "Coupe",
+        "Imagem": "https://i.imgur.com/Wf7bGAO.png"
     }
 ];
